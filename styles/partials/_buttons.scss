@@ -1,0 +1,50 @@
+.btn {
+  @apply transition mr-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 shadow leading-loose;
+
+  &:hover {
+    @apply bg-purple-500 text-white shadow-lg;
+  }
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:active {
+    @apply bg-purple-700 shadow-none;
+  }
+}
+
+.btn-light {
+  @apply bg-white transition text-gray-700 leading-normal;
+
+  &:hover {
+    @apply bg-purple-500 text-white;
+  }
+}
+
+.tag {
+  @apply m-1 transition py-1 px-4 shadow font-medium rounded-md bg-white text-sm leading-loose cursor-pointer;
+
+  &.active {
+    @apply text-white bg-purple-600 shadow;
+
+    &:hover {
+      @apply bg-purple-500;
+    }
+    &:active {
+      @apply bg-purple-700;
+    }
+  }
+
+  &:hover {
+    @apply shadow-lg;
+  }
+
+  &:active {
+    @apply bg-gray-300 shadow;
+  }
+}
+
+/* .icon {
+    vertical-align: middle;
+} */
