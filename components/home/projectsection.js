@@ -1,10 +1,11 @@
-import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
   faChevronRight,
-} from '@fortawesome/free-solid-svg-icons'
-import AwesomeSlider from 'react-awesome-slider'
+} from '@fortawesome/free-solid-svg-icons';
+import AwesomeSlider from 'react-awesome-slider';
+import Button from '../common/Buttons';
 
 export default function ProjectSection() {
   return (
@@ -48,10 +49,11 @@ export default function ProjectSection() {
           I have made in the past 1 1/2 years. There are both old and new
           projects to show my progress throughout my studies.
         </p>
+
         <Link href="/projects">
-          <a className="btn w-max ml-0">View projects</a>
+          <Button>View projects</Button>
         </Link>
       </div>
     </section>
-  )
+  );
 }
