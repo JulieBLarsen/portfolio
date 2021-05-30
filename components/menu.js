@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function Menu() {
-  const [open, setOpen] = useState(false)
-  let sideMenu
+  const [open, setOpen] = useState(false);
+  let sideMenu;
   if (open) {
     sideMenu = (
       <div className="sidemenu fixed inset-y-0 right-0 bg-purple-600  w-4/5 sm:w-2/5 lg:w-1/4 xl:w-1/5 flex flex-col items-center justify-between z-40">
@@ -74,7 +74,7 @@ export default function Menu() {
           </div>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -95,5 +95,5 @@ export default function Menu() {
         {sideMenu}
       </nav>
     </>
-  )
+  );
 }

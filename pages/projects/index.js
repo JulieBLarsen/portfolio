@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Menu from '../../components/Menu';
+
 import Footer from '../../components/Footer';
 import Head from 'next/head';
 import { fetchAPI } from '../../lib/api';
@@ -23,7 +23,6 @@ export default function Projects({ projects, featuredTech }) {
       <Head>
         <title>Julie Larsen | Projects</title>
       </Head>
-      <Menu></Menu>
       <div className="container mx-auto px-10 pt-10">
         <h1 className="text-center">Projects</h1>
         <div className="mt-16 my-3 flex flex-wrap -m-1">

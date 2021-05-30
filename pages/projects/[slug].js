@@ -1,14 +1,14 @@
-import { fetchAPI } from '../../lib/api'
-import Menu from '../../components/menu'
-import Footer from '../../components/footer'
-import Head from 'next/head'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fetchAPI } from '../../lib/api';
+import Menu from '../../components/Menu';
+import Footer from '../../components/footer';
+import Head from 'next/head';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faDesktop,
   faChevronLeft,
   faChevronRight,
-} from '@fortawesome/free-solid-svg-icons'
-import AwesomeSlider from 'react-awesome-slider'
+} from '@fortawesome/free-solid-svg-icons';
+import AwesomeSlider from 'react-awesome-slider';
 
 export default function Project({ project }) {
   return (
@@ -84,11 +84,11 @@ export default function Project({ project }) {
       </div>
       <Footer></Footer>
     </>
-  )
+  );
 }
 
 export async function getStaticPaths() {
-  const articles = await fetchAPI('/projects')
+  const articles = await fetchAPI('/projects');
 
   return {
     paths: articles.map((project) => ({
@@ -97,14 +97,14 @@ export async function getStaticPaths() {
       },
     })),
     fallback: false,
-  }
+  };
 }
 
 export async function getStaticProps({ params }) {
-  const projects = await fetchAPI(`/projects?slug=${params.slug}`)
+  const projects = await fetchAPI(`/projects?slug=${params.slug}`);
 
   return {
     props: { project: projects[0] },
     revalidate: 1,
-  }
+  };
 }
