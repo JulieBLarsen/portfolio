@@ -75,7 +75,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-between px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <div className="flex justify-end py-3 bg-gray-50 sm:px-6">
               <Button>Send message</Button>
             </div>
           </div>
