@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Footer() {
+function Footer() {
   return (
     <footer className="text-center m-10">
       🍕
@@ -48,3 +48,4 @@ export default function Footer() {
     </footer>
   );
 }
+export default Footer;
