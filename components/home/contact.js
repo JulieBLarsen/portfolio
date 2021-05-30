@@ -1,3 +1,5 @@
+import { Button } from '../common/Buttons';
+
 export default function Contact() {
   return (
     <section
@@ -73,10 +75,8 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
-              <button type="submit" className="btn m-0">
-                Send message
-              </button>
+            <div className="flex justify-between px-4 py-3 bg-gray-50 text-right sm:px-6">
+              <Button>Send message</Button>
             </div>
           </div>
         </form>
