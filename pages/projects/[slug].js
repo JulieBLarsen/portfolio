@@ -1,6 +1,6 @@
 import { fetchAPI } from '../../lib/api';
 import Menu from '../../components/Menu';
-import Footer from '../../components/footer';
+
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -9,6 +9,7 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import AwesomeSlider from 'react-awesome-slider';
+import Footer from '../../components/Footer';
 
 export default function Project({ project }) {
   return (
@@ -82,7 +83,7 @@ export default function Project({ project }) {
           </ul>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }
