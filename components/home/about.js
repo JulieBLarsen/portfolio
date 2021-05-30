@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Menu from '../menu';
+import Menu from '../Menu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function About() {

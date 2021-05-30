@@ -1,9 +1,10 @@
-import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Footer() {
   return (
     <footer className="text-center m-10">
+      🍕
       <div className="mb-5 text-gray-500 flex justify-center">
         <a
           className="p-2 text-xl"
@@ -24,7 +25,6 @@ export default function Footer() {
           <FontAwesomeIcon className="icon" icon={['fab', 'discord']} />
         </a>
       </div>
-
       <nav className="text-gray-500 mx-auto flex flex-wrap justify-center">
         <Link href="/">
           <a className="border-r border-gray-300 pl-4 pr-4 hover:text-gray-800">
@@ -46,5 +46,5 @@ export default function Footer() {
         </Link>
       </nav>
     </footer>
-  )
+  );
 }

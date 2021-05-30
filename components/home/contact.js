@@ -82,5 +82,5 @@ export default function Contact() {
         </form>
       </div>
     </section>
-  )
+  );
 }

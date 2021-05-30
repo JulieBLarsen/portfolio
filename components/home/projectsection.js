@@ -5,7 +5,7 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import AwesomeSlider from 'react-awesome-slider';
-import Button from '../common/Buttons';
+import { Button } from '../common/Buttons';
 
 export default function ProjectSection() {
   return (
