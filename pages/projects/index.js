@@ -1,20 +1,20 @@
-import Link from 'next/link'
-import Menu from '../../components/menu'
-import Footer from '../../components/footer'
-import Head from 'next/head'
-import { fetchAPI } from '../../lib/api'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
+import Menu from '../../components/Menu';
+import Footer from '../../components/Footer';
+import Head from 'next/head';
+import { fetchAPI } from '../../lib/api';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export async function getStaticProps() {
   const [projects, featuredTech] = await Promise.all([
     fetchAPI('/projects'),
     fetchAPI(`/technologies?featured=${true}`),
-  ])
+  ]);
 
   return {
     props: { projects, featuredTech },
-  }
+  };
 }
 
 export default function Projects({ projects, featuredTech }) {
@@ -94,7 +94,7 @@ export default function Projects({ projects, featuredTech }) {
         </div>
       </div>
 
-      <Footer></Footer>
+      <Footer />
     </>
-  )
+  );
 }
