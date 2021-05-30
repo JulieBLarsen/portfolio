@@ -1,5 +1,3 @@
-import About from '../components/home/About';
-import Projectsection from '../components/home/Projectsection';
 import Contact from '../components/home/Contact';
 import Layout from '../components/layout/Layout';
 import Header from '../components/home/Header';
@@ -12,8 +10,6 @@ export default function Home() {
       <Layout>
         <Header />
         <GetToKnowMe />
-        {/*         <About></About>
-        <Projectsection></Projectsection> */}
         <Skills />
         <Contact />
       </Layout>
