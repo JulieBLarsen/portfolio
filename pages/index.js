@@ -4,6 +4,7 @@ import GetToKnowMe from '../components/home/GetToKnowMe';
 import Skills from '../components/home/Skills';
 import Contact from '../components/home/Contact';
 import Footer from '../components/Footer';
+import Projects from '../components/home/projectsection/Projects';
 
 export default function Home() {
   return (
@@ -12,8 +13,8 @@ export default function Home() {
         <Header />
         <GetToKnowMe />
         <Skills />
+        <Projects />
         <Contact />
-        <Footer />
       </Layout>
     </>
   );

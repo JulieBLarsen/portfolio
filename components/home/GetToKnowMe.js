@@ -10,7 +10,7 @@ function GetToKnowMe() {
   const [theme, setTheme] = useContext(ThemeContext);
 
   return (
-    <div className="container max-w-6xl h-screen mx-auto flex flex-col gap-5 justify-center">
+    <section className="container max-w-6xl h-screen mx-auto flex flex-col gap-5 justify-center">
       <div className="flex flex-row justify-center items-center gap-10">
         <div className="relative h-full w-full rounded-full">
           <Image
@@ -72,7 +72,7 @@ function GetToKnowMe() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
