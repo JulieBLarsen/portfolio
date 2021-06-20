@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext } from 'react';
 import ThemeContext from '../../context/ThemeContext';
 
-function GetToKnowMe() {
+function About() {
   const [theme, setTheme] = useContext(ThemeContext);
 
   return (
@@ -60,4 +60,4 @@ function GetToKnowMe() {
   );
 }
 
-export default GetToKnowMe;
+export default About;
