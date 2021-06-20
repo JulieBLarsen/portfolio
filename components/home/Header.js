@@ -37,12 +37,12 @@ function Header() {
 
       <motion.h1
         variants={variant}
-        className="mt-10 text-3xl md:text-6xl font-bold  md:text-center text-gray-900">
+        className="mt-10 text-3xl sm:text-6xl font-bold text-center text-gray-900">
         Hi! I'm Julie,
       </motion.h1>
       <motion.h2
         variants={variant}
-        className="text-3xl md:text-4xl md:text-center leading-tight text-purple-600">
+        className="text-2xl sm:text-4xl text-center leading-tight text-purple-600">
         a front-end web developer.
       </motion.h2>
       {/*       <motion.p
