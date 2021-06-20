@@ -43,7 +43,7 @@ function AvatarInfo() {
                 .{' '}
               </Menu.Item>
               <Menu.Item as="p" className="mb-0">
-                <Link href="https://github.com/juliebl/improved-portfolio">
+                <Link href="https://github.com/juliebl/portfolio">
                   <a className="flex justify-center items-center mb-0 text-sm text-center p-1 transition bg-gray-200 rounded-md hover:bg-purple-500 hover:text-white">
                     <CodeIcon className="w-4 mr-2 inline" />
                     See code
