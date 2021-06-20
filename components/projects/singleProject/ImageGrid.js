@@ -19,7 +19,12 @@ function ImageGrid({ featured, images }) {
   return (
     <>
       <div className="md:hidden">
-        <ImageSlider images={images} />
+        <ImageSlider
+          images={imageArray}
+          open={open}
+          setOpen={setOpen}
+          setPhotoIndex={setPhotoIndex}
+        />
       </div>
       <div className="hidden md:grid relative h-xxl w-auto grid-cols-4 grid-rows-2 gap-2">
         <p
@@ -77,14 +82,14 @@ function ImageGrid({ featured, images }) {
             );
           })}
         </div>
-        <Gallery
-          images={imageArray}
-          open={open}
-          setOpen={setOpen}
-          photoIndex={photoIndex}
-          setPhotoIndex={setPhotoIndex}
-        />
       </div>
+      <Gallery
+        images={imageArray}
+        open={open}
+        setOpen={setOpen}
+        photoIndex={photoIndex}
+        setPhotoIndex={setPhotoIndex}
+      />
     </>
   );
 }
