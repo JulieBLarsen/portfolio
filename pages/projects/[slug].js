@@ -1,12 +1,17 @@
 import { fetchAPI } from '../../lib/api';
 import Head from 'next/head';
-import { CodeIcon, ExternalLinkIcon } from '@heroicons/react/outline';
-import AwesomeSlider from 'react-awesome-slider';
+import {
+  ChevronLeftIcon,
+  CodeIcon,
+  ExternalLinkIcon,
+} from '@heroicons/react/outline';
 import Layout from '../../components/layout/Layout';
 import { Button, LightButton } from '../../components/common/Buttons';
 import ImageGrid from '../../components/projects/singleProject/ImageGrid';
+import { useRouter } from 'next/router';
 
 export default function Project({ project }) {
+  const router = useRouter();
   return (
     <>
       <Layout>
@@ -14,6 +19,15 @@ export default function Project({ project }) {
           <title>Julie Larsen | {project.title}</title>
         </Head>
         <div className="py-20 md:py-40">
+          <div className="mb-4 inline-block">
+            <a
+              className="cursor-pointer text-sm py-1 pr-1 font-medium hover:text-gray-900 flex"
+              onClick={() => router.back()}>
+              <ChevronLeftIcon className="w-4 mr-1 icon" />
+              Go back to projects
+            </a>
+          </div>
+
           <div className="mx-auto">
             <ImageGrid
               featured={project.featured_image}
