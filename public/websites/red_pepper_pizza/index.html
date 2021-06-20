@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Red Pepper Pizza Pizzeria">
+    <meta name="keywords" content="pepper,pizza,pizzeria,italian cuisine,pizza delivery, order pizza">
+    <meta name="author" content="Red Pepper Pizza">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Pepper Pizza - Order pizza</title>
+    <script src="https://kit.fontawesome.com/24fa93cdd3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar-top">
+
+                <img class="logo" src="images/logo.png" alt="Red Pepper Pizza logo">
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Book online</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#"><button class="primary-btn" type="submit">Order pizza</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="header-text">
+            <h1>Order your pizza now</h1>
+            <h2>For pick up or delivery</h2>
+        </div>
+
+        <div class="left-side">
+            <fieldset>
+                <p>Register for delivery</p>
+                <form action="#" method="get">
+                    <label for="name" class="visuallyhidden">Name:</label>
+                    <input type="text" placeholder="Name" name="name">
+                    <label for="address" class="visuallyhidden">Address:</label>
+                    <input type="text" placeholder="Address" name="address">
+                    <label for="zipcode" class="visuallyhidden">Zipcode:</label>
+                    <input type="number" placeholder="Zipcode" name="zipcode">
+                    <label for="email" class="visuallyhidden">Email:</label>
+                    <input type="text" placeholder="Email" name="email">
+                    <label for="phonenumber" class="visuallyhidden">Phone number:</label>
+                    <input type="tel" placeholder="Phone Number" name="phonenumber">
+                    <div class="align-right"><button class="primary-btn" type="submit">Sign up</button></div>
+                </form>
+            </fieldset>
+
+            <fieldset>
+                <p>Already a user?</p>
+                <form action="#">
+                    <label for="username" class="visuallyhidden"></label>
+                    <input type="text" placeholder="Username" name="username">
+                    <label for="password" class="visuallyhidden"></label>
+                    <input type="text" placeholder="Password" name="password">
+                    <div class="align-right"><button class="secondary-btn" type="submit">Login</button></div>
+                </form>
+            </fieldset>
+        </div>
+
+        <div class="middle">
+            <form action="#" method="get">
+                <fieldset>
+                    <div>
+                        <label for="pizza">What type of pizza do you want?</label>
+                        <select name="pizza" id="pizza">
+                            <option value="" disabled selected>Select pizza</option>
+                            <option value="margherita">Margherita</option>
+                            <option value="romana">Romana</option>
+                            <option value="redpepper">Red Pepper</option>
+                            <option value="siciliana">Siciliana</option>
+                            <option value="diavola">Diavola</option>
+                            <option value="capricciosa">Capricciosa</option>
+                            <option value="quattroformaggi">Quattro formaggi</option>
+                        </select>
+                    </div>
+                    <div class="flex-start form-bkg shadow">
+                        <div>
+                            <ul>
+                                <label for="extra">Extra toppings</label>
+                                <li><input type="checkbox" name="extra" id="extra" class="check" value="marinara">
+                                    Marinara </li>
+                                <li><input type="checkbox" name="extra" id="extra" value="mozzarella"> Mozzarella </li>
+                                <li><input type="checkbox" name="extra" id="extra" value="parmesan"> Parmesan </li>
+                                <li><input type="checkbox" name="extra" id="extra" value="mushroom"> Mushroom </li>
+                                <li><input type="checkbox" name="extra" id="extra" value="peppers"> Peppers</li>
+                            </ul>
+                        </div>
+                        <ul class="no-label">
+                            <li><input type="checkbox" name="extra" id="extra" class="check" value="garlic"> Garlic
+                            </li>
+                            <li><input type="checkbox" name="extra" id="extra" value="salami"> Salami </li>
+                            <li><input type="checkbox" name="extra" id="extra" value="prosciutto"> Prosciutto </li>
+                            <li><input type="checkbox" name="extra" id="extra" value="parma"> Parma ham </li>
+                            <li><input type="checkbox" name="extra" id="extra" value="rocket"> Rocket </li>
+                        </ul>
+                        <div>
+                            <ul>
+                                <label for="crust">Type of crust/dough</label>
+                                <li><input type="radio" name="crust" id="crust" value="thin"> Thin (Italian)</li>
+                                <li><input type="radio" name="crust" id="crust" value="thick"> Thick (American)</li>
+                                <li><input type="radio" name="crust" id="crust" value="gluten_free"> Gluten free</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="request">Special requests/allergies</label>
+                        <textarea name="request" id="request" placeholder="Write here..." cols="30" rows="4"></textarea>
+                    </div>
+                    <div class="form-bkg shadow">
+                        <ul>
+                            <label for="crust">Payment method</label>
+                            <li><input type="radio" name="payment" id="payment" value="cash"> Cash</li>
+                            <li><input type="radio" name="payment" id="payment" value="card"> Card</li>
+                            <li><input type="radio" name="payment" id="payment" value="paypal"> Paypal</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button class="primary-btn margin-right" type="submit">Order now</button>
+                        <button class="secondary-btn margin-right" type="submit">Save for later</button>
+                        <button class="tertiary-btn">Cancel</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="right-side"><img class="pizza-slice" src="images/pizzaslice.png" alt="Pizza slice">
+        </div>
+
+        <footer>
+            <h2>Open Mon-Sun 10 am to 11 pm</h2>
+            <p><i class="fas fa-phone-alt"></i> +1-202-555-0104</p>
+            <nav class="bottom-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-book-open"></i>Menu</a></li>
+                    <li><a href="#"><i class="fas fa-carrot"></i>Allergies</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i>Order online</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fas fa-map-marked-alt"></i>Locations</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i>About us</a></li>
+                    <li><a href="#"><i class="fas fa-comment-dots"></i>Contact</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fas fa-lock"></i>Privacy policy</a></li>
+                    <li><a href="#"><i class="far fa-newspaper"></i>News and Press</a></li>
+                    <li><a href="#"><i class="far fa-handshake"></i>Distributors</a></li>
+
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fas fa-briefcase"></i>Job opportunities</a></li>
+                    <li><a href="#"><i class="fas fa-sign-in-alt"></i>Employee login</a></li>
+                </ul>
+            </nav>
+            <div class="social-media">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-snapchat-square"></i>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

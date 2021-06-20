@@ -1,0 +1,974 @@
+:root {
+    --darkblue: rgba(9, 51, 65, 1);
+    --darkgrey: rgba(63, 63, 63, 1);
+    --teal: rgba(0, 181, 175, 1);
+    --blue: rgba(0, 174, 211, 1);
+    --lightgrey: rgba(141, 170, 178, 1);
+    --darkteal: rgba(0, 112, 142, 1);
+    --error-red: rgb(212, 0, 0);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Karla", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/***************** MAIN LAYOUT *****************/
+.container {
+    min-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: minmax(50px, auto) minmax(600px, auto) minmax(700px, auto) auto minmax(700px, auto) auto auto minmax(500px, auto);
+    grid-template-areas:
+        "nav nav nav nav nav"
+        "h h h h h"
+        ". why why aside ."
+        ". how how how ."
+        ". jumbo jumbo jumbo ."
+        ". trips trips trips ."
+        ". map map map ."
+        "f f f f f";
+}
+
+
+.why-us,
+aside,
+.how-to,
+.jumbotron,
+.trips {
+    margin: 5rem auto;
+    max-width: 95%;
+}
+
+.container-simple section,
+.container-trips section {
+    margin: 2rem 5% 5rem 5%;
+    max-width: 95%;
+}
+
+.trip-header-info {
+    margin-top: 5rem;
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--darkblue);
+}
+
+header {
+    grid-area: h;
+    background-color: var(--darkgrey);
+}
+
+.why-us {
+    grid-area: why;
+}
+
+aside {
+    grid-area: aside;
+}
+
+.how-to {
+    grid-area: how;
+}
+
+.jumbotron {
+    grid-area: jumbo;
+}
+
+.trips {
+    grid-area: trips;
+}
+
+.map {
+    grid-area: map;
+}
+
+footer {
+    grid-area: f;
+    background-color: var(--darkblue);
+    margin-top: 5rem;
+}
+
+/***************** GOOGLE MAPS API *****************/
+iframe {
+    width: 100%;
+    height: 70vh;
+    border: none;
+
+}
+
+.trip-divs iframe {
+    height: 10rem;
+}
+
+/***************** SIMPLE LAYOUT *****************/
+.container-simple .container {
+    min-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: minmax(50px, auto) minmax(600px, auto) minmax(100vh, auto) minmax(500px, auto);
+    grid-template-areas:
+        "nav nav nav"
+        "h h h"
+        ". section ."
+        "f f f";
+}
+
+.container-simple section {
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.container-simple section>div {
+    margin: 3rem 0;
+}
+
+/***************** TRIPS PAGE LAYOUT *****************/
+.container-trips .container {
+    min-height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: minmax(50px, auto) minmax(600px, auto) auto minmax(100vh, auto) minmax(500px, auto);
+    grid-template-areas:
+        "nav nav nav"
+        "h h h"
+        ". info ."
+        ". section ."
+        "f f f";
+}
+
+.trip-header-info {
+
+    grid-area: info;
+    text-align: center;
+}
+
+.container-trips section {
+    grid-area: section;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.container-trips section>div {
+    margin: 5% 2%;
+    flex: 1;
+    min-width: 25rem;
+}
+
+/***************** TEXT *****************/
+h1,
+h2 {
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+
+h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+}
+
+.why-us h2,
+aside h2 {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+header h1 {
+    font-size: 5rem;
+    margin-bottom: 1em;
+    letter-spacing: 0.2rem;
+}
+
+header h2 {
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+}
+
+.flex h2 {
+    margin: 2rem auto 0 auto;
+    font-weight: 700;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--darkteal);
+
+}
+
+a:hover {
+    color: var(--teal);
+}
+
+a:active {
+    color: var(--darkblue);
+}
+
+.current-link {
+    color: var(--teal) !important;
+}
+
+aside.reviews p {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    color: var(--darkblue);
+}
+
+div.trip-card h2 {
+    margin: 0.5rem !important;
+}
+
+div.trip-card p {
+    margin: 0.5rem;
+    display: inline;
+    font-size: 1.2rem;
+}
+
+div.trip-card a,
+footer a {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+}
+
+div.trip-card a:hover,
+footer a:hover {
+    color: var(--blue);
+}
+
+div.trip-card a:active,
+footer a:active {
+    color: var(--darkteal);
+}
+
+footer h3 {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+
+footer a {
+    text-transform: none;
+    font-weight: 400;
+}
+
+.container-simple section .address-div {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.trip-divs h1 {
+    margin: 2rem;
+}
+
+.trip-info span.info {
+    padding-left: 0.5rem;
+    color: var(--teal);
+}
+
+.trip-info h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.center {
+    text-align: center;
+    display: inline;
+}
+
+/***************** IMAGES *****************/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.why-us p {
+    text-align: justify;
+}
+
+.float-left {
+    float: left;
+    margin: 0 2rem 1rem 0;
+}
+
+.float-right {
+    float: right;
+    margin: 0 0 1rem 2rem;
+}
+
+/***************** FLEXBOXES AND CARDS *****************/
+.flex,
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.col-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    min-width: 20rem;
+    max-width: 40rem;
+    margin: 2rem;
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.trip-info {
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.trip-info>* {
+    margin: 0 1rem 1rem 0;
+    padding-right: 1rem;
+    border-right: 1px solid var(--darkgrey);
+    margin-top: 0;
+}
+
+.trip-info>*:last-child {
+    border: none;
+}
+
+/***************** NAVIGATION BAR *****************/
+.top-nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.top-nav form {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+h3.logo {
+    margin: 0;
+    color: white;
+}
+
+ul.top-menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+}
+
+ul.top-menu li {}
+
+ul.top-menu li a {
+    padding: 0 2rem;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+
+}
+
+ul.top-menu li a:hover {
+    transition: 0.2s;
+    color: var(--blue);
+}
+
+ul.top-menu li a:active {
+    color: var(--teal);
+}
+
+/***************** FORMS *****************/
+/* buttons */
+.secondary-button {
+    background-color: var(--teal);
+    color: rgb(255, 255, 255);
+    padding: .8rem 1.8rem;
+    border-radius: 5px;
+    margin: 0.5rem auto;
+}
+
+.secondary-button:hover {
+    background-color: var(--darkteal);
+}
+
+.secondary-button:active {
+    background-color: var(--darkgrey);
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+::placeholder,
+button,
+input[type=text] {
+    font-family: "Karla", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.error {
+    display: none;
+    color: var(--error-red);
+    padding: 10px 0;
+    font-size: 14px;
+    float: right;
+}
+
+p#submitMessage {
+    display: block;
+    text-align: center;
+}
+
+/***************** NAV AND HEADER FORMS *****************/
+nav button {
+    background-color: var(--lightgrey);
+    color: rgb(255, 255, 255);
+}
+
+nav button:hover {
+    transition: 0.2s;
+    background-color: var(--teal);
+}
+
+nav button:active {
+    background-color: var(--darkteal);
+}
+
+nav input[type=text] {
+    background-color: rgb(230, 244, 244);
+    border: none;
+}
+
+header ::placeholder {
+    text-transform: uppercase;
+}
+
+header button {
+    background-color: var(--teal);
+    outline: none;
+    border: none;
+    padding: 0.8rem 1rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+header button:hover {
+    transition: 0.2s;
+    background-color: var(--lightgrey);
+}
+
+header button:active {
+    background-color: var(--darkgrey);
+}
+
+header input[type=text] {
+    width: 20rem;
+    border: none;
+    padding: 0.8rem 1rem;
+    text-transform: none;
+    background-color: rgb(230, 244, 244);
+}
+
+header input[type=text]:hover,
+header input[type=text]:focus,
+nav input[type=text]:hover,
+nav input[type=text]:focus {
+    transition: 0.2s;
+    background-color: rgb(255, 255, 255);
+}
+
+/***************** CONTACT FORM *****************/
+div .contact-container {
+    background-color: rgb(214, 241, 241);
+    padding: 2rem;
+}
+
+.contact-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact label {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.contact input {
+    height: 2.5rem;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+}
+
+
+.contact input,
+textarea {
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgb(214, 241, 241);
+}
+
+.contact input:hover,
+.contact textarea:hover,
+.contact input:focus,
+.contact textarea:focus {
+    border: 1px solid var(--lightgrey);
+
+}
+
+.contact button[type="submit"] {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.contact textarea {
+    resize: none;
+    height: 10rem;
+}
+
+.contact input::placeholder,
+textarea::placeholder {
+    font-weight: 400;
+}
+
+
+/***************** HEADER *****************/
+header hr {
+    width: 30%;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+header {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 112, 142, 0.7)),
+        url(../images/headerimg.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+
+/***************** JUMBOTRON *****************/
+
+.jumbotron {
+    background: url(../images/swords.jpg) no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+div.jumbo-text {
+    width: 100%;
+    text-align: center;
+    background: rgba(9, 51, 65, 0.6);
+    color: rgb(255, 255, 255);
+}
+
+div.jumbo-text h2 {
+    margin: 2.5rem;
+}
+
+/***************** TRIP-CARDS HOMEPAGE *****************/
+
+.trip-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 20rem;
+    margin: 1rem;
+    justify-content: flex-end;
+    height: 20rem;
+}
+
+.house {
+    background: url(../images/trips-small/house.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.lake {
+    background: url(../images/trips-small/lake.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.oldtown {
+    background: url(../images/trips-small/oldtown.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.road {
+    background: url(../images/trips-small/road.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.sentrum {
+    background: url(../images/trips-small/sentrum.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.threeswords {
+    background: url(../images/trips-small/threeswords.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.trip-card:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+
+/***************** FOOTER *****************/
+footer div.flex {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-nav-divs {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 2rem;
+    min-width: 12rem;
+}
+
+.footer-right-div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 2rem;
+    min-width: 10rem;
+}
+
+.footer-right-div div {
+    margin-bottom: 2rem;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0.5rem !important;
+}
+
+.social-media i {
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.social-media i:hover {
+    color: var(--teal);
+}
+
+.social-media i:active {
+    color: var(--darkteal);
+}
+
+
+footer address {
+    color: rgb(255, 255, 255) !important;
+}
+
+footer address * {
+    margin-bottom: 0.8rem;
+}
+
+footer address a {
+    text-decoration: underline;
+}
+
+footer address a:hover {
+    text-decoration: none;
+}
+
+footer address a:active {
+    color: var(--darkteal)
+}
+
+/***************** RESPONSIVE *****************/
+@media screen and (max-width: 1200px) {
+
+    .container {
+        grid-template-columns: 1fr 1fr 5fr 3fr 1fr;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    header h2 {
+        font-size: 2.2rem;
+    }
+
+    .container-simple .container {
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: minmax(50px, auto) minmax(600px, auto) minmax(700px, auto) minmax(500px, auto);
+        grid-template-areas:
+            "nav nav nav"
+            "h h h"
+            ". section ."
+            "f f f";
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+
+    .container {
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(50px, auto) repeat(4, minmax(500px, auto)) minmax(700px, auto) minmax(500px, auto) auto minmax(300px, auto);
+        grid-template-areas:
+            "nav"
+            "h"
+            "why"
+            "how"
+            "aside"
+            "jumbo"
+            "trips"
+            "map"
+            "f";
+    }
+
+    .container-simple .container {
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: minmax(50px, auto) minmax(500px, auto) minmax(700px, auto) minmax(500px, auto);
+        grid-template-areas:
+            "nav nav nav"
+            "h h h"
+            ". section ."
+            "f f f";
+    }
+
+    .container-trips .container {
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: minmax(50px, auto) minmax(500px, auto) auto minmax(100vh, auto) minmax(500px, auto);
+        grid-template-areas:
+            "nav nav nav"
+            "h h h"
+            ". info ."
+            ". section ."
+            "f f f";
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .jumbotron {
+        background: url(../images/swordsmall.jpg) no-repeat center center;
+
+    }
+
+    header h2 {
+        font-size: 1.8rem;
+    }
+
+    .top-nav form {
+        display: none;
+    }
+
+    ul.top-menu li a {
+        padding: auto 0.5rem;
+    }
+
+    .float-left,
+    .float-right {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .trip-info {
+        justify-content: center;
+    }
+
+    .trip-divs .secondary-button {
+        display: block;
+        text-align: center;
+
+    }
+
+    .container-trips section>div {
+        margin-bottom: 10%;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+
+    html,
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(20px, auto) repeat(4, minmax(400px, auto)) minmax(700px, auto) auto auto minmax(300px, auto);
+        grid-template-areas:
+            "nav"
+            "h"
+            "why"
+            "how"
+            "aside"
+            "jumbo"
+            "trips"
+            "map"
+            "f";
+    }
+
+    .container-simple .container {
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(50px, auto) minmax(400px, auto) minmax(700px, auto) minmax(500px, auto);
+        grid-template-areas:
+            "nav"
+            "h"
+            "section"
+            "f";
+    }
+
+    .container-trips .container {
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: minmax(50px, auto) minmax(400px, auto) auto minmax(100vh, auto) minmax(500px, auto);
+        grid-template-areas:
+            "nav nav nav"
+            "h h h"
+            ". info ."
+            ". section ."
+            "f f f";
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .top-nav {
+        flex-wrap: wrap;
+    }
+
+    ul.top-menu li a {
+        padding: 1rem 0.5rem;
+    }
+
+    div.trip-card {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    html,
+    body {
+        font-size: 12px;
+    }
+
+    ul.top-menu li a {
+        padding: auto 0.2rem;
+    }
+
+    div.trip-card {
+        width: 90%;
+    }
+}

@@ -1,0 +1,425 @@
+main {
+    background-color: white;
+
+}
+
+.launch-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.launch-menu>* {
+    flex: 1;
+    min-width: 200px;
+    margin: 0;
+    padding: 15px 10px;
+    cursor: pointer;
+    background-color: var(--grey);
+}
+
+.launch-menu>*:active,
+.active-button {
+    background-color: var(--dark-grey);
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+#launchDate {
+    width: 15%;
+}
+
+#mission {
+    width: 40%;
+}
+
+#customer {
+    width: 30%;
+}
+
+#vehicle {
+    width: 15%;
+}
+
+tr td,
+tr th {
+    padding: 15px;
+}
+
+tr {
+    border: 4px solid white;
+}
+
+tbody tr {
+    background-color: var(--light-grey);
+}
+
+.less-info {
+    cursor: pointer;
+}
+
+.less-info:hover {
+    background-color: var(--light-grey-darker);
+}
+
+.see-more-launches {
+    text-align: center;
+    background-color: var(--off-white);
+    cursor: pointer;
+}
+
+.see-more-launches:active {
+    background-color: var(--grey-darkest);
+}
+
+.loading {
+    animation: loading 1.5s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% {
+        background-color: var(--light-grey);
+    }
+
+    50% {
+        background-color: rgb(224, 224, 224);
+    }
+
+    100% {
+        background-color: var(--light-grey);
+    }
+}
+
+/*********** MORE INFO ***********/
+.hide {
+    display: none;
+}
+
+.show-more-info {
+    display: none;
+    width: 100%;
+}
+
+.show-row {
+    display: table-row;
+}
+
+.more-info {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr 4fr;
+    grid-template-areas: "main main main patch"
+        "list list list date"
+        "img img vid vid"
+        "close close close close";
+    max-width: 100%;
+    grid-gap: 20px;
+}
+
+.more-info-row {
+    width: 100%;
+}
+
+
+
+.more-info-main {
+    grid-area: main;
+}
+
+.article-link {
+    margin-right: 10px;
+}
+
+.patch {
+    grid-area: patch;
+    width: 60%;
+    padding: 0 50px 0 0;
+    margin: auto 0 auto auto;
+}
+
+.more-info-list {
+    grid-area: list;
+}
+
+.slash {
+    grid-area: date;
+    text-align: right;
+}
+
+.img {
+    grid-area: img;
+    padding: 0;
+}
+
+.img img,
+.placeholder {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.video {
+    grid-area: vid;
+    min-width: 100%;
+}
+
+.img img,
+.video,
+.placeholder {
+    max-width: 100%;
+    margin: 0 0 10px 0;
+    padding: 0;
+    display: block;
+}
+
+.placeholder {
+    max-height: 468px !important;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin: 0 0 10px 0;
+}
+
+.close-icon {
+    grid-area: close;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: -20px;
+    padding: 30px 0 20px 0;
+    cursor: pointer;
+    color: var(--grey-darkest);
+}
+
+.close-icon:hover {
+    background-color: rgba(241, 241, 241, 0);
+    color: var(--grey-darker);
+}
+
+
+.more-info a {
+    color: rgb(0, 0, 0);
+}
+
+.more-info a:hover {
+    text-decoration: underline;
+}
+
+.more-info a:active {
+    font-weight: 700;
+}
+
+.more-info p {
+    line-height: 2;
+}
+
+.more-info h2 {
+    font-weight: 400;
+}
+
+.more-info h3 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.more-info h4 {
+    margin: 0;
+}
+
+.more-info-list {
+    margin-top: auto;
+}
+
+.more-info-list div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.more-info-list ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.more-info-list ul li {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.more-info-list ul li span:nth-child(1) {
+    width: 140px;
+}
+
+.more-info-list ul li span:nth-child(2) {
+    font-weight: 700;
+}
+
+/* for some reason there is no space between the slash 
+and right-text when inside this ul, so this is a fix for that*/
+.more-info-list ul li .right-slash {
+    margin-left: 5px;
+}
+
+.slash {
+    margin: auto 0 20px 0;
+}
+
+.slash>* {
+    margin: 0;
+}
+
+.left-slash,
+.right-slash {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.left-slash {
+    font-weight: 600;
+}
+
+/* Overrides ul li style */
+.right-slash {
+    font-weight: 400 !important;
+}
+
+.left-slash::after {
+    content: " / ";
+}
+
+/*********** RESPONSIVE ***********/
+@media screen and (max-width: 1500px) {
+    main {
+        margin: 125px 5% 0 5%;
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+    main {
+        margin: 75px 0;
+    }
+
+    tr td:nth-child(3),
+    tr th:nth-child(3) {
+        display: none;
+    }
+
+    h4,
+    .slash {
+        text-align: center;
+    }
+
+    .img,
+    .video,
+    .placeholder {
+        margin: 0 auto 10px auto;
+        text-align: center;
+    }
+
+    .more-info-list div {
+        justify-content: space-evenly;
+    }
+
+    .more-info {
+        grid-template-areas: "main"
+            "date"
+            "patch"
+            "list"
+            "vid"
+            "img"
+            "close";
+        grid-template-columns: 1fr;
+    }
+
+    img.patch {
+        margin: 0 auto;
+        padding: 0;
+        width: auto;
+        max-height: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    main {
+        margin: 75px 0;
+    }
+
+    tr td:nth-child(3),
+    tr td:nth-child(4),
+    tr th:nth-child(3),
+    tr th:nth-child(4) {
+        display: none;
+    }
+
+    tr td:nth-child(2),
+    tr th:nth-child(2) {
+        text-align: right;
+    }
+
+    .more-info-list div {
+        flex-direction: column;
+    }
+
+    .more-info h3 {
+        font-size: 2rem;
+    }
+
+    .more-info-list ul li {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    main {
+        padding: 10px;
+    }
+
+    #launchDate {
+        width: 30%;
+    }
+
+    #mission {
+        width: 70%;
+    }
+
+    .more-info-list ul li {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    #launchDate {
+        width: 35%;
+    }
+
+    .header-row {
+        font-size: 0.9rem;
+    }
+
+    #mission {
+        width: 55%;
+    }
+
+    .more-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .more-info h3 {
+        font-size: 1.4rem;
+    }
+}

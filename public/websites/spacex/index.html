@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="SpaceX microsite shows updated information about the SpaceX launches, launchpads, rockets and spacecrafts. This is an exam project made at front end development at Noroff">
+    <meta name="keywords"
+        content="spacex,microsite,spacex microsite,spacex information,spacex countdown, spacex launches, spacex launchpads, noroff, exam project, front end development">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX microsite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/24fa93cdd3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <section class="header" id="top">
+            <div class="fixed-top-bar">
+                <div class="top-bar" id="top-bar"><a href="index.html"><img src="img/logo.png" alt="SpaceX logo"
+                            class="logo"></a>
+                    <nav class="top-nav" id="top-nav">
+                        <ul>
+                            <li id="toggle-menu"><i class="fas fa-bars"></i></li>
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li><a href="launches.html">Launches</a></li>
+                            <li><a href="launch_pads.html">Launch pads</a></li>
+                            <li><a href="rockets.html">Rockets</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="header-content-main-text">
+                    <h1>SpaceX</h1>
+                    <p>SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was
+                        founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to
+                        live on other planets.</p>
+                    <a href="launches.html" class="button">See launch schedule</a>
+                </div>
+                <div class="header-content-countdown">
+                    <p class="small-text">Time until next launch</p>
+                    <p class="countdown"></p>
+                    <a href="" class="arrow-link">See more details <i class="fas fa-chevron-right arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="next-launch" id="next-launch">
+        </section>
+
+        <div class="previous-launches-and-launch-pads-bkg">
+            <section class="previous-launches">
+                <h2 class="center">Previous launches</h2>
+                <div class="triple-card-container">
+
+                </div><a href="launches.html" class="button">See more launches</a>
+            </section>
+
+            <section class="launch-pads">
+                <h2 class="center">Launch pads</h2>
+                <div class="triple-card-container">
+
+                </div>
+                <a href="launch_pads.html" class="button">See more launch pads</a>
+            </section>
+        </div>
+        <div class="rockets-and-spacecrafts-bkg">
+            <section class="rockets-and-spacecrafts info-cards">
+                <div class="rockets single-info-card"><img src="img/sample-images/falcon9.jpg" alt="">
+                    <div class="info-card-content">
+                        <h2>Rockets</h2>
+                        <p>A space rocket is a vehicle with a very powerful jet engine designed to carry people or
+                            equipment beyond Earth and out into space.
+                            SpaceX rockets transport payloads and spacecraft into orbit. SpaceX believes rocket
+                            reusability
+                            is the key breakthrough needed to reduce the cost of access to space and enable people to
+                            live on other planets. </p>
+                        <a href="rockets.html" class="button">See all rockets</a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <section class="latest-video">
+            <iframe src="https://www.youtube.com/embed/videoseries?list=UUtI0Hodo5o5dUb67FeUjDeA" frameborder="0"
+                title="Latest youtube video" allowfullscreen></iframe>
+        </section>
+        <footer>
+            <a href="#top" class="to-top-icon"><i class="fas fa-chevron-up center-icon"></i></a>
+            <nav class="footer-links">
+                <div>
+                    <h2>Sitemap:</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="launches.html">Launches</a></li>
+                        <li><a href="launch_pads.html">Launch pads</a></li>
+                        <li><a href="rockets.html">Rockets</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>More info:</h2>
+                    <ul>
+                        <li><a href="https://www.spacex.com/">SpaceX</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/SpaceX">Wikipedia</a></li>
+                        <li><a href="https://www.nasa.gov/">NASA</a></li>
+                        <li><a href="https://www.reddit.com/r/spacex/">Reddit</a></li>
+                    </ul>
+                </div>
+                <div class="social-media-links">
+                    <ul>
+                        <li><a href="http://www.youtube.com/spacex"><i class="fab fa-youtube-square"></i></a></li>
+                        <li><a href="https://twitter.com/spacex"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="http://www.flickr.com/spacexphotos"><i class="fab fa-flickr"></i></a></li>
+                        <li><a href="http://www.instagram.com/spacex"><i class="fab fa-instagram-square"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <hr>
+            <p>This website is a first year exam project made by Julie Larsen in the Front end development program at <a
+                    href="https://www.noroff.no/en/studies/vocational-school/front-end-development">Noroff School of
+                    technology and digital media</a> and is
+                not affiliated with SpaceX in any way.</p>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/countdown.js"></script>
+</body>
+
+</html>

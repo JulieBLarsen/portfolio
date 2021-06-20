@@ -1,0 +1,491 @@
+@import url("../fonts/sourcesanspro/sourcesanspro.css");
+@import url("../fonts/baloo/baloo.css");
+
+/* COLORS:
+green: rgb(64,163,50);
+coral: rgb(226,84,72);
+peach: rgb(227,132,104);
+mustard: rgb(255,194,50);
+charcoal: rgb(51,51,51);
+*/
+
+/************** BORDER BOX FIX **************/
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/************** HTML **************/
+body,
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    background: rgb(247, 244, 243);
+    background: url(../images/paper_bkg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+/************** TEXT and LINKS **************/
+body,
+p,
+a {
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 2;
+    letter-spacing: 0.7px;
+    color: rgb(51, 51, 51);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 0.8;
+}
+
+h1 {
+    font-family: "Baloo", Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: rgb(226, 84, 72);
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+}
+
+footer * {
+    color: rgb(255, 255, 255);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+}
+
+a:hover {
+    transition: all 0.2s;
+    color: rgb(141, 141, 141);
+}
+
+a:active {
+    transition: all 0.2s;
+    color: rgb(51, 51, 51);
+}
+
+/************** LAYOUT **************/
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 12% 40% 15% auto;
+    grid-template-rows: 5rem auto auto auto;
+    grid-gap: 2em;
+    background-size: cover;
+    overflow-x: hidden;
+
+}
+
+header {
+    grid-column: -1 / 1;
+    grid-row: 1 / 2;
+}
+
+.header-text {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+}
+
+.left-side {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.middle {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.right-side {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+
+}
+
+footer {
+    grid-column: -1 / 1;
+    grid-row: 4 / 5;
+    background-color: rgb(51, 51, 51);
+    margin-top: 5rem;
+    padding: 3rem;
+}
+
+/************** GENERAL DESIGN **************/
+.margin-right {
+    margin-right: 2rem;
+}
+
+.shadow,
+textarea,
+select,
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+.primary-btn,
+.secondary-btn {
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/************** NAVBAR **************/
+
+.navbar-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.navbar-top ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-top li {
+    padding: 0.5rem 1rem;
+}
+
+.navbar-top button {
+    text-transform: uppercase;
+    background: rgb(64, 163, 50);
+}
+
+/************** IMAGES **************/
+img {
+    box-sizing: content-box;
+}
+
+.logo {
+    width: 12%;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+.pizza-slice {
+    transform: rotate(130deg);
+    margin-left: -5em;
+    margin-top: -2em;
+    height: 50%;
+}
+
+.basil {
+    transform: rotate(45deg);
+    height: 7rem;
+}
+
+/************** BUTTONS **************/
+button,
+input[type="submit"] {
+    background: none;
+    color: inherit;
+    border: none;
+    height: 2.5rem;
+    padding: 0;
+    width: 10rem;
+    font: inherit;
+    outline: inherit;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.primary-btn {
+    background: rgba(226, 84, 72, 1);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+
+}
+
+.primary-btn:hover {
+    transition: all 0.1s;
+    -moz-transform: translate(0, -4px);
+    -ms-transform: translate(0, -4px);
+    -o-transform: translate(0, -4px);
+    -webkit-transform: translate(0, -4px);
+    transform: translate(0, -4px);
+    -moz-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+.primary-btn:active {
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    -webkit-transform: none;
+    transform: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.secondary-btn {
+    background: rgb(255, 194, 50);
+    font-weight: 600;
+}
+
+.secondary-btn:hover {
+    transition: all 0.1s;
+    background: none;
+    border: 3px solid rgba(255, 194, 50, 1);
+}
+
+.secondary-btn:active {
+    background: rgb(255, 194, 50);
+}
+
+.tertiary-btn {
+    display: inline;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tertiary-btn:hover {
+    transition: all 0.1s;
+    color: rgb(172, 172, 172);
+}
+
+.tertiary-btn:active {
+    transition: all 0.1s;
+    color: rgb(51, 51, 51);
+}
+
+/************** FORMS **************/
+.form-bkg div {
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+}
+
+fieldset p {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+label,
+form p {
+    display: block;
+    font-size: 1rem;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 0.7px;
+    margin: 0.5rem 0;
+}
+
+fieldset div {
+    margin: 1rem 0;
+}
+
+.form-bkg {
+    background-color: rgb(255, 255, 255);
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.flex-start {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.flex-start ul {
+    margin-right: 3rem;
+}
+
+.no-label {
+    margin-top: 3rem;
+}
+
+button,
+input[type="submit"],
+select,
+option,
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    line-height: 2;
+    letter-spacing: 0.7px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline;
+}
+
+form ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+textarea,
+select,
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.7px;
+}
+
+select,
+input[type="text"],
+input[type="number"],
+input[type="tel"] {
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+
+/* Removes select placeholder text on drop down */
+option[value=""][disabled] {
+    display: none;
+}
+
+textarea {
+    resize: none;
+    font-size: 0.9rem;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.7px;
+    padding: 1em;
+}
+
+/* Hides the up/down buttons */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Labels for screen readers */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/************** FOOTER **************/
+footer h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+
+footer p {
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.bottom-nav ul {
+    margin: 2%;
+    list-style: none;
+}
+
+.bottom-nav ul li {
+    margin: 1rem;
+}
+
+.bottom-nav ul li a {
+    font-weight: normal;
+    text-transform: none;
+}
+
+footer i {
+    margin-right: 1rem;
+}
+
+.social-media {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.social-media i {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.social-media i:hover {
+    transition: all 0.2s;
+    color: rgb(150, 150, 150);
+}

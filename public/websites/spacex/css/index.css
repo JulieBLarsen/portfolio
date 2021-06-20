@@ -1,0 +1,263 @@
+html,
+body {
+    /* background: url(../img/bkg4.jpg) fixed; */
+    background-color: rgb(19, 21, 29);
+}
+
+.next-launch {
+    margin: 125px 15% 0 15%;
+}
+
+.previous-launches-and-launch-pads-bkg {
+    padding: 250px 0;
+}
+
+.launch-pads {
+    margin: 125px 15% 0 15%;
+}
+
+.previous-launches,
+.launch-pads {
+    margin: 250px 10%;
+    padding: 50px;
+    background-color: var(--dark-opacity);
+    color: rgb(255, 255, 255);
+}
+
+/************ TEXT ************/
+
+.next-launch h3 {
+    letter-spacing: 3px;
+}
+
+.next-launch h2 {
+    margin: 0;
+}
+
+.previous-launches-card p:last-of-type::after {
+    content: "...";
+}
+
+h2 {
+    margin-bottom: 45px;
+}
+
+.next-launch h3 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.latest .date {
+    font-size: 0.9rem;
+}
+
+/************ IMAGES ************/
+
+.triple-card,
+.triple-card img {
+    margin: auto;
+}
+
+.triple-card img,
+iframe {
+    margin-bottom: 0;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: 0 70%;
+}
+
+/*********** NEXT LAUNCH ***********/
+
+.next-launch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.next-launch-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0;
+}
+
+.next-launch-info ul li {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.next-launch-info ul li span:nth-child(1) {
+    width: 160px;
+}
+
+.next-launch-info ul li span:nth-child(2) {
+    font-weight: 700;
+}
+
+
+/*********** TRIPLE CARDS / PREVIOUS LAUNCHES / LAUNCH PADS ***********/
+.previous-launches-and-launch-pads-bkg {
+    background: url(../img/bkg2.jpg) fixed;
+    padding: 25px 0;
+}
+
+.triple-card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+.triple-card {
+    margin: 0;
+}
+
+.launch-pads,
+.previous-launches {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+}
+
+.launch-pads .button,
+.previous-launches .button {
+    margin: 20px auto 0 auto;
+}
+
+.map,
+iframe {
+    border: 0;
+}
+
+/*********** ROCKETS AND SPACECRAFTS ***********/
+.rockets-and-spacecrafts-bkg {
+    background: url(../img/bkg3.jpg) fixed;
+    padding: 25px 0;
+}
+
+footer h2 {
+    margin-bottom: 0;
+}
+
+/*********** VIDEO ***********/
+.latest-video iframe {
+    height: 100vh;
+}
+
+/*********** RESPONSIVE ***********/
+@media screen and (max-width: 1700px) {
+    .next-launch {
+        margin: 125px 10%;
+    }
+
+    .previous-launches,
+    .launch-pads,
+    .single-info-card {
+        margin: 200px 10%;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    .next-launch {
+        margin: 125px 5%;
+    }
+
+    .previous-launches,
+    .launch-pads,
+    .single-info-card {
+        margin: 75px 0;
+    }
+
+}
+
+@media screen and (max-width: 1110px) {
+
+    /** NEXT-LAUNCH **/
+    .next-launch-info ul li {
+        margin-bottom: 10px !important;
+    }
+
+    .next-launch-info ul li {
+        flex-wrap: wrap;
+    }
+
+    .patch {
+        width: 30%;
+    }
+
+    /** TRIPLE CARDS **/
+    .triple-card-container {
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .triple-card:last-of-type {
+        display: none;
+    }
+
+    .triple-card img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    html,
+    body {
+        line-height: 1.5;
+    }
+
+    .next-launch-info ul li span:last-of-type {
+        margin-top: 10px;
+    }
+
+    .next-launch {
+        flex-direction: column-reverse !important;
+        padding: 5% !important;
+    }
+
+    .next-launch h2,
+    .next-launch h3,
+    .next-launch .date {
+        text-align: center;
+    }
+
+    .single-info-card {
+        padding: 50px;
+    }
+
+    .patch {
+        width: 150px;
+        margin: 0 auto 40px auto;
+        height: auto;
+    }
+
+    .triple-card img,
+    iframe {
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .next-launch h3 {
+        font-size: 2rem;
+    }
+
+    .triple-card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .triple-card:nth-last-of-type(-n+2) {
+        display: none;
+    }
+
+
+}

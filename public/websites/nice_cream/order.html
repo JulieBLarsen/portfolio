@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="NICE CREAM - Create custom ice cream and have it delivered to you!">
+    <meta name="keywords" content="ice cream,nice cream,vegan,low-fat,lactose free,dessert,custom,delivery">
+    <meta name="author" content="Nice Cream">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NICE CREAM - Order</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/24fa93cdd3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="top-nav">
+        <h1 class="logo">Nice cream</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container-order">
+        <h1>Custom order ice cream</h1>
+        <form class="flexbox" action="#" method="get">
+            <div class="card card-items-flex">
+                <div><label for="base">
+                        <h2>Base</h2>
+                    </label>
+                    <ul>
+                        <li><input type="radio" name="base" id="base" value="cream">Cream</li>
+                        <li><input type="radio" name="base" id="base" value="vegan">Vegan</li>
+                        <li><input type="radio" name="base" id="base" value="lowfate">Low fat</li>
+                        <li><input type="radio" name="base" id="base" value="lactosefree">Lactose free</li>
+                    </ul>
+                </div>
+                <div>
+                    <label for="flavor">
+                        <h2>Flavor</h2>
+                    </label>
+                    <select name="flavor" id="flavor">
+                        <option value="" disabled selected>Select flavor</option>
+                        <option value="vanilla">Vanilla</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="strawberry">Strawberry</option>
+                        <option value="pistachio">Pistachio</option>
+                        <option value="coconut">Coconut</option>
+                        <option value="banana">Banana</option>
+                        <option value="greentea">Green tea</option>
+                        <option value="cheesecake">Cheesecake</option>
+                    </select></div>
+            </div>
+            <div class="card">
+                <label for="chunk">
+                    <h2>Chunks and pieces</h2>
+                </label>
+                <ul>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="chocolate">Chocolate</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="whitechocolate">White chocolate</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="brownie">Brownie</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="cookiedough">Cookie dough</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="cookiesncream">Cookies and cream</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="strawberry">Strawberries</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="rasberry">Rasberries</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="mango">Banana</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="walnuts">Walnuts</li>
+                    <li><input type="checkbox" name="chunk" id="chunk" value="pecans">Pecans</li>
+                </ul>
+            </div>
+            <div class="card">
+                <label for="syrup">
+                    <h2>Syrup</h2>
+                </label>
+                <ul>
+                    <li><input type="radio" name="syrup" id="syrup" value="chocolate">Chocolate</li>
+                    <li><input type="radio" name="syrup" id="syrup" value="whitechocolate">White chocolate</li>
+                    <li><input type="radio" name="syrup" id="syrup" value="caramel">Caramel</li>
+                    <li><input type="radio" name="syrup" id="syrup" value="strawberry">Strawberry</li>
+                    <li><input type="radio" name="syrup" id="syrup" value="nougat">Nougat</li>
+                    <li><input type="radio" name="syrup" id="syrup" value="passionfruit">Passionfruit</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <label for="design">
+                    <h2>Box design</h2>
+                </label>
+                <ul>
+                    <li><input type="radio" name="box" id="box" value="light">Light</li>
+                    <li><input type="radio" name="box" id="box" value="funfetti">Funfetti</li>
+                    <li><input type="radio" name="box" id="box" value="glitter">Glitter</li>
+                    <li><input type="radio" name="box" id="box" value="dark">Dark</li>
+                </ul>
+                <label for="extra">
+                    <h2>Extra</h2>
+                </label>
+                <ul>
+                    <li><input type="checkbox" name="extra" id="extra" value="cones">Ice cream cones</li>
+                    <li><input type="checkbox" name="extra" id="extra" value="scoop">Ice cream scoop</li>
+                    <li><input type="checkbox" name="extra" id="extra" value="sprinkles">Sprinkles</li>
+                    <li><input type="checkbox" name="extra" id="extra" value="fudge">Fudge</li>
+                </ul>
+            </div>
+            <div class="card">
+                <label for="boxtext">
+                    <h2>Add text</h2>
+                </label>
+                <textarea name="boxtext" id="boxtext" cols="20" rows="3"></textarea>
+
+                <label for="boximage">
+                    <h2>Add a photo</h2>
+                </label>
+                <input type="file" name="boximage" id="boximage" accept="image/png, image/jpeg"">
+        </div>
+        <div class=" card card-items-flex">
+                <div><label for="discount">
+                        <h2>Discount code</h2>
+                    </label>
+                    <input type="text" name="discount" id="discount"></div>
+                <div class="card-items-flex"><label for="submit">
+                        <h2>Proceed to delivery and checkout </h2>
+                    </label>
+                    <button type="submit" name="submit" id="submit" class="card-order">Order</button></div>
+            </div>
+        </form>
+
+
+    </div>
+
+    <footer>
+
+        <img class="logo-img" src="images/icecreamlogo.png" alt="Ice cream logo">
+        <h1 class="logo">Nice cream</h1>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Ingredients</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms of use</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-snapchat-square"></i>
+        </div>
+        <p>Copyright &copy; 2019 NICE CREAM</p>
+
+    </footer>
+    </div>
+</body>
+
+</html>

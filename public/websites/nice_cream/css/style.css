@@ -1,0 +1,719 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("../fonts/bebas_neue/BebasNeue-Regular.eot");
+    src: url("../fonts/bebas_neue/BebasNeue-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/bebas_neue/BebasNeue-Regular.otf") format("opentype"),
+        url("../fonts/bebas_neue/BebasNeue-Regular.ttf") format("truetype"),
+        url("../fonts/bebas_neue/BebasNeue-Regular.woff") format("woff"),
+        url("../fonts/bebas_neue/BebasNeue-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/poppins/Poppins-Regular.eot");
+    src: url("../fonts/poppins/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/poppins/Poppins-Regular.otf") format("opentype"),
+        url("../fonts/poppins/Poppins-Regular.svg") format("svg"),
+        url("../fonts/poppins/Poppins-Regular.ttf") format("truetype"),
+        url("../fonts/poppins/Poppins-Regular.woff") format("woff"),
+        url("../fonts/poppins/Poppins-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/poppins/Poppins-SemiBold.eot");
+    src: url("../fonts/poppins/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/poppins/Poppins-SemiBold.woff2") format("woff2"),
+        url("../fonts/poppins/Poppins-SemiBold.woff") format("woff"),
+        url("../fonts/poppins/Poppins-SemiBold.ttf") format("truetype"),
+        url("../fonts/poppins/Poppins-SemiBold.svg#Poppins-SemiBold") format("svg");
+    font-weight: 600;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+/************* LAYOUT *************/
+.container {
+    width: 100%;
+    margin-top: 55px;
+    display: grid;
+    grid-template-rows: minmax(70vh, auto) repeat(3, minmax(60rem, auto)) minmax(30rem, auto);
+    grid-template-areas:
+        "header"
+        "section1"
+        "section2"
+        "section3"
+        "footer";
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+}
+
+header {
+    grid-area: header;
+    background: url(../images/blue.jpg) no-repeat center center;
+}
+
+.section1 {
+    grid-area: section1;
+}
+
+.section2 {
+    grid-area: section2;
+    background: url(../images/section2.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.section3 {
+    grid-area: section3;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(30, 30, 30);
+}
+
+section {
+    padding-bottom: 10rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+.container-order {
+    padding: 5rem 0 10rem;
+}
+
+.container-order h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+}
+/**** FLEXBOX ****/
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+
+
+}
+
+.section1 .flexbox div,
+.section3 .flexbox div,
+.card {
+    flex: 1;
+    transition: 0.3s;
+    min-width: 20rem;
+    min-height: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 20rem;
+}
+
+.card:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.flexbox div img {
+    text-align: center;
+}
+
+.header-flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header-flex div {
+    margin: 2rem;
+    max-width: 50%;
+}
+/**** CARDS ****/
+.card {
+    background-color: rgb(255, 255, 255);
+    -moz-box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.card-items-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.card i {
+    padding: 0.5rem 1rem;
+}
+
+.card-price {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card-price p {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-price * {
+    margin: 1rem;
+    color: rgb(70, 70, 70);
+}
+
+.section3 .flexbox {
+    align-items: flex-end;
+}
+
+.section3 .card {
+    height: 25rem;
+}
+
+.section3 .flexbox div {
+    flex: 1;
+    transition: 0.3s;
+    min-width: 20rem;
+    min-height: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 20rem;
+}
+
+
+/**** IMAGES ****/
+
+.header-img img {
+    width: 100%;
+}
+
+.section1 img {
+    display: block;
+    width: 15rem;
+    margin: 0 auto
+}
+.section3 img {
+    max-width: 20rem;
+}
+/**** BUTTONS ****/
+button.buy {
+    padding: 0.3rem 1.5rem;
+    width: 80%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(224, 100, 110);
+    border: 0;
+    border-radius: 4px;
+}
+
+button.buy:hover {
+    background-color: rgb(240, 122, 132);
+}
+
+button.buy:active {
+    background-color: rgb(252, 161, 169);
+}
+
+button.order {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(224, 100, 110);
+    border: 0;
+    -moz-box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+button.order:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+    -moz-box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 1rem rgba(0, 0, 0, 0.3);
+}
+
+button.order:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: 0.1s;
+    transform: scale(1);
+}
+
+button.order:focus {
+    outline: none;
+}
+
+
+button.card-order {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    padding: 0.3rem 1.5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(224, 100, 110);
+    border: 0;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+
+button.card-order:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+    -moz-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+button.card-order:active {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: 0.1s;
+    transform: scale(1);
+}
+
+button.card-order:focus {
+    outline: none;
+}
+
+
+/**** TEXT ****/
+* {
+    font-size: 1rem;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+section h1 {
+    margin-top: 0;
+}
+
+.section2 h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    font-size: 10rem;
+    color: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    text-align: left;
+
+}
+
+header h2 {
+    font-size: 2.5rem;
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.9);
+
+}
+
+h1 {
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/**** TOP NAV BAR ****/
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    z-index: 2;
+
+}
+
+.logo {
+    margin: 0 auto 0 2%;
+    font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+
+.top-nav ul {
+    margin: 0 2% 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.top-nav ul li {
+    display: inline-block;
+    margin-left: 2rem;
+    padding: 0;
+}
+
+.top-nav ul li:hover {
+    transition: 0.1s;
+    transform: scale(1.2);
+}
+
+.top-nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.2rem;
+}
+
+.top-nav ul li a:active {
+    color: rgb(150, 150, 150);
+}
+
+/**** FOOTER NAV ****/
+
+.bottom-nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: baseline;
+    padding: 0;
+}
+
+.bottom-nav ul li {
+    display: inline-block;
+    padding: 0rem;
+}
+
+.bottom-nav ul li a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+
+}
+
+.bottom-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.bottom-nav ul li a:active {
+    color: rgb(200, 200, 200);
+}
+
+/**** FOOTER ****/
+.logo-img {
+    box-sizing: content-box;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+
+footer h1.logo {
+    margin: 0;
+}
+
+footer p {
+    text-align: center;
+    color: rgb(200, 200, 200);
+    font-size: 0.8rem;
+}
+
+footer i {
+    font-size: 1.5rem;
+    color: rgb(200, 200, 200);
+    margin-right: 1rem;
+}
+
+.social-media {
+    font-size: 1.5rem;
+}
+
+.social-media i {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.social-media i:hover {
+    transition: all 0.2s;
+    color: rgb(150, 150, 150);
+}
+
+/**** FORMS ****/
+
+button,
+input[type="submit"],
+select,
+option,
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+form ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+textarea,
+select,
+input[type="text"] {
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+textarea:focus,
+input[type="text"]:focus {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+select,
+input[type="text"] {
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+
+
+/* Removes select placeholder text on drop down */
+option[value=""][disabled] {
+    display: none;
+}
+
+textarea {
+    resize: none;
+    padding: 1em;
+}
+
+/**** RESPONSIVE ****/
+@media only screen and (max-width: 441px) {
+    header img {
+        min-width: 80%;
+    }
+
+    .top-nav ul li {
+        margin-left: 0.1rem !important;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    body,
+    html {
+        font-size: 10px;
+    }
+
+    .container {
+        margin-top: 44px;
+    }
+
+    .top-nav {
+        padding: 1rem;
+    }
+
+    .top-nav ul li {
+        margin-left: 0.8rem;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .section1 .flexbox div,
+    .card {
+        max-width: 25rem;
+    }
+
+    header h1,
+    header h2 {
+        text-align: center;
+    }
+
+    .header-flex div {
+        max-width: 100%;
+    }
+
+    header img {
+        width: 50%;
+    }
+
+    .container-order {
+        background: rgb(176, 207, 210) !important;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+
+    body,
+    html {
+        font-size: 12px;
+    }
+
+    header h1,
+    header h2 {
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 41px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "section1"
+            "section2"
+            "section3"
+            "footer";
+    }
+
+    .top-nav ul li {
+        margin-left: 0.5rem;
+    }
+
+    .top-nav ul li a {
+        padding: 0;
+    }
+
+    .header-flex div {
+        max-width: 100%;
+    }
+
+    header img {
+        width: 50%;
+    }
+
+    header {
+        background: url(../images/bluemedium.jpg) no-repeat center center;
+    }
+
+    .container-order {
+        background: rgb(176, 207, 210) !important;
+    }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1292px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    header h1 {
+        font-size: 6rem;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+    header img {
+        width: 30%;
+    }
+
+    header {
+        background: url(../images/bluemedium.jpg) no-repeat center center;
+    }
+
+    .container-order {
+        background: url(../images/bluemedium.jpg) no-repeat fixed;
+    }
+
+}
+
+/***** ORDER WEBPAGE *****/
+.container-order {
+    background: rgb(176, 207, 210);
+    background: url(../images/bluelarge.jpg) no-repeat fixed;
+}
+
+.container-order .card {
+    padding: 1rem 1rem 2.5rem 1rem;
+}

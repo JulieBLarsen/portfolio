@@ -70,11 +70,11 @@ export default function Projects({ projects, featuredTech }) {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-white rounded-lg h-auto flex flex-col shadow hover:shadow-lg transition">
+                className="bg-white rounded-lg h-auto grid grid-rows-2 shadow hover:shadow-lg transition">
                 <Link href={`/projects/${project.slug}`}>
                   <img
                     className="cursor-pointer h-56 rounded w-full transition object-cover object-center"
-                    src={project.images[0].url}
+                    src={project.featured_image.url}
                     alt={project.title}
                   />
                 </Link>

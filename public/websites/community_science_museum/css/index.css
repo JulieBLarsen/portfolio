@@ -1,0 +1,485 @@
+section.news h5 {
+    font-size: 1rem;
+}
+
+
+a.read-more {
+    color: var(--coral);
+    text-decoration: none;
+}
+
+
+a.read-more:hover {
+    transition: ease 0.5s;
+    color: var(--lightblue);
+
+}
+
+
+a.read-more:active {
+    color: var(--purple);
+}
+
+a.read-more {
+    font-weight: 600;
+}
+
+.image-text a {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+
+/* LAYOUT */
+.container {
+    display: grid;
+    max-width: 100%;
+    height: 100%;
+    grid-template-areas:
+        "nav nav nav nav"
+        "head head head head"
+        ". explore news ."
+        "kids kids kids kids"
+        "teach teach teach teach"
+        "research research research research"
+        ". exhibits exhibits ."
+        "map map map map"
+        "footer footer footer footer";
+    grid-template-columns: 15% 50% 20% 15%;
+    grid-template-rows: minmax(45px, auto) 650px auto repeat(3, minmax(900px, auto)) auto 500px auto;
+}
+
+.topnav {
+    grid-area: nav;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header {
+    grid-area: head;
+}
+
+.explore-together {
+    grid-area: explore;
+}
+
+.news {
+    grid-area: news;
+}
+
+.explore-kids {
+    grid-area: kids;
+    background-color: var(--coral);
+}
+
+.explore-teachers {
+    grid-area: teach;
+}
+
+.explore-researchers {
+    grid-area: research;
+    background-color: var(--purple);
+}
+
+.exhibits {
+    grid-area: exhibits;
+
+}
+
+.quotes {
+    grid-area: quotes;
+}
+
+.map {
+    grid-area: map;
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--coral);
+    padding: 0 5% 5% 5%;
+}
+
+section {
+    padding: 100px 5%;
+}
+
+
+/* FLEXBOXES */
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+    margin: 1rem;
+    justify-content: flex-end;
+}
+
+
+
+/* Explore section */
+section.explore>div {
+    margin: 3rem 0;
+}
+
+/* IMAGES */
+.explore-kids img,
+.explore-teachers img,
+.explore-researchers img {
+    max-width: 50%;
+    margin: auto 2rem;
+}
+
+
+
+/* EXPLORE TOGETHER */
+
+.explore-together img.museum,
+.explore-kids img,
+.explore-kids video,
+.explore-teachers img,
+.explore-researchers img {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 40px 10px var(--glow);
+    -moz-box-shadow: 0px 10px 40px 10px var(--glow);
+    box-shadow: 0px 10px 40px 10px var(--glow);
+}
+
+
+.explore-together img.museum {
+    max-width: 45%;
+    margin: 2rem 2rem 0 0;
+    flex: 1;
+}
+
+.museum-text,
+.explore-kids,
+.explore-teachers,
+.explore-researchers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.museum-text div {
+    margin-top: 2rem;
+    flex: 2;
+}
+
+.explore-kids div,
+.explore-teachers div,
+.explore-researchers div {
+    min-width: 20rem;
+    max-width: 40rem;
+    flex: 2;
+}
+
+
+/* EXPLORE TEACHERS */
+
+.explore-teachers {
+    flex-direction: row-reverse;
+}
+
+
+
+/* News section */
+
+
+section.news>div {
+    margin: 3rem 0;
+}
+
+section.news h5 {
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+section.news p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.news-container>* {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.news-container>div:last-child {
+    margin-bottom: 3rem;
+}
+
+.news-container>a {
+    margin-top: 1.5rem;
+}
+
+/* Exhibits section */
+section.exhibits .flex-row {
+    justify-content: space-evenly;
+    margin: auto -1rem;
+}
+
+section.exhibits .flex-col {
+    height: 15rem;
+    flex: 1;
+}
+
+.exhibits .flex-row>div {
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 40px 10px var(--glow);
+    -moz-box-shadow: 0px 10px 40px 10px var(--glow);
+    box-shadow: 0px 10px 40px 10px var(--glow);
+}
+
+.exhibits .flex-row>div:hover {
+    transition: 0.2s;
+    transform: scale(1.1);
+}
+
+.image-text {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 10px 10px;
+}
+
+
+.cosmology {
+    background: url(../img/exhibits/cosmology.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.cosmology .image-text {
+    background-color: rgba(255, 74, 158, 0.5);
+}
+
+.evolution {
+    background: url(../img/exhibits/dna.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.evolution .image-text {
+    background-color: rgba(255, 173, 0, 0.5);
+}
+
+.bio {
+    background: url(../img/exhibits/bio.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.bio .image-text {
+    background-color: rgba(255, 33, 25, 0.5);
+}
+
+.robotics {
+    background: url(../img/exhibits/robotics.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.robotics .image-text {
+    background-color: rgba(35, 79, 234, 0.5);
+}
+
+.ecology {
+    background: url(../img/exhibits/ecology.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.ecology .image-text {
+    background-color: rgba(52, 221, 135, 0.5);
+}
+
+.see-more {
+    background: url(../img/exhibits/seemore.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.see-more .image-text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(145, 0, 171, 0.2);
+}
+
+
+
+/* MAP SECTION */
+section.map {
+    padding: 100px 0 0 0;
+}
+
+section.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin-bottom: -5px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+section.map iframe:hover {
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: none;
+    transition: all 0.5s;
+}
+
+
+@media only screen and (max-width: 1690px) {
+    .container {
+        grid-template-columns: 10% 55% 25% 10%;
+    }
+
+    .explore-kids img,
+    .explore-teachers img,
+    .explore-researchers img {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .container {
+        grid-template-columns: 5% 65% 25% 5%;
+    }
+
+    header h2 {
+        font-size: 1.8rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .explore-together img.museum {
+        max-width: 50%;
+    }
+
+    .explore-kids img,
+    .explore-teachers img,
+    .explore-researchers img {
+        max-width: 50%;
+    }
+
+
+}
+
+@media only screen and (max-width: 980px) {
+    .container {
+        grid-template-areas:
+            "nav nav nav"
+            "head head head"
+            ". explore ."
+            "kids kids kids"
+            "teach teach teach"
+            "research research research"
+            ". news ."
+            ". exhibits ."
+            "map map map"
+            "footer footer footer";
+        grid-template-columns: 1% 98% 1%;
+        grid-template-rows: minmax(45px, auto) 650px repeat(6, auto) 400px auto;
+    }
+
+    .explore-kids img,
+    .explore-teachers img,
+    .explore-researchers img {
+        max-width: 40%;
+    }
+
+    .explore-kids div,
+    .explore-teachers div,
+    .explore-researchers div {
+        max-width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 736px) {
+
+    .container {
+        max-width: 100%;
+        grid-template-columns: 5% 90% 5%;
+    }
+
+    .explore-teachers,
+    .explore-kids,
+    .explore-researchers {
+        flex-direction: column-reverse;
+    }
+
+    .museum-text {
+        flex-direction: column;
+    }
+
+    .explore-together img.museum,
+    .explore-kids img,
+    .explore-teachers img,
+    .explore-researchers img {
+        width: 100%;
+        max-width: 100%;
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .container {
+        grid-template-areas:
+            "nav"
+            "head"
+            "explore"
+            "kids"
+            "teach"
+            "research"
+            "news"
+            "exhibits"
+            "map"
+            "footer";
+        grid-template-columns: 100%;
+
+    }
+
+    .explore-kids div,
+    .explore-teachers div,
+    .explore-researchers div {
+        min-width: 10%;
+    }
+
+}
+
+
+@media only screen and (min-width: 1390px) {
+
+    .explore-kids,
+    .explore-teachers,
+    .explore-researchers {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}

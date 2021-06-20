@@ -1,0 +1,174 @@
+/* LAYOUT */
+.container {
+    display: grid;
+    max-width: 100%;
+    height: 100%;
+    grid-template-areas:
+        "nav"
+        "header"
+        "robot"
+        "evo"
+        "bio"
+        "cos"
+        "eco"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(45px, auto) 650px repeat(6, auto);
+}
+
+.topnav {
+    grid-area: nav;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header {
+    grid-area: header;
+    background: url(../img/header_space.jpg) no-repeat center bottom;
+    background-size: auto;
+}
+
+#robotics {
+    grid-area: robot;
+    background-color: var(--coral);
+}
+
+#evolution {
+    grid-area: evo;
+
+}
+
+#biomed {
+    grid-area: bio;
+    background-color: var(--blue);
+
+}
+
+
+#cosmology {
+    grid-area: cos;
+
+}
+
+#ecology {
+    grid-area: eco;
+    background-color: var(--cream);
+    color: rgb(51, 51, 51);
+
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+header .flex-row>div {
+    border-radius: 10px;
+    max-width: 60rem;
+    padding: 50px;
+    background-color: rgba(15, 10, 51, 0.8);
+}
+
+
+/* IMAGES */
+section img {
+    max-width: 50%;
+    margin: auto 2rem;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 40px 10px var(--glow);
+    -moz-box-shadow: 0px 10px 40px 10px var(--glow);
+    box-shadow: 0px 10px 40px 10px var(--glow);
+}
+
+/* SECTIONS */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section div {
+    min-width: 20rem;
+    max-width: 40rem;
+    flex: 2;
+}
+
+section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 1690px) {
+    .container {
+        grid-template-columns: 100%;
+    }
+
+    section img {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+    header {
+        padding: 0;
+    }
+
+    header .flex-row {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+@media only screen and (max-width: 980px) {
+    section div {
+        max-width: 100%;
+    }
+
+    section img {
+        max-width: 40%;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+
+    section:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+    section {
+        flex-direction: column-reverse;
+    }
+
+    section img {
+        width: 100%;
+        max-width: 100%;
+        margin: 2rem 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    html,
+    body {
+        max-width: 100% !important;
+    }
+
+    section div {
+        min-width: 10%;
+    }
+
+    header .flex-row>div {
+        max-width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 1390px) {
+    section {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
