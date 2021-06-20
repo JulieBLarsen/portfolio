@@ -1,27 +1,47 @@
-import React from 'react';
+import { MoonIcon, SunIcon } from '@heroicons/react/outline';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 
-function DarkModeToggler(props) {
+function DarkModeToggler() {
+  const [darkMode, setDarkMode] = useState(false);
+  const className = `w-40 h-12 cursor-pointer rounded-full p-1 flex items-center ${
+    darkMode ? 'bg-green-200 justify-end' : 'bg-red-600 justify-start'
+  }`;
   return (
-    <div className="h-6 w-6 mr-6 hover:bg-purple-600">
-      {/*       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298 298" {...props}>
-        <path
-          d="M290 119.124h-11.278c-4.797-11.502-14.41-20.223-29.945-22.705C236.976 94.532 206 94.124 206 94.124H92s-30.976.408-42.776 2.295c-15.535 2.482-25.148 11.203-29.945 22.705H8a8 8 0 000 16h7.581c-1.01 14.564 3.189 30.227 10.241 41.856 17.558 28.961 55.225 41.261 93.416 1.989 12.123-12.463 18.024-22.889 20.906-33.377 0 0 .498-2.466.762-3.29 1.094-3.42 4.271-6.179 8.011-6.179h.166c3.649 0 6.763 2.675 7.928 5.972.316.898.808 3.292.822 3.347 2.874 10.514 8.776 21.131 20.929 33.625 38.191 39.27 75.858 26.833 93.416-2.126 7.081-11.679 10.769-27.871 10.073-41.817H290a8 8 0 000-16zm-132.88 2.42c-2.518-.881-5.222-1.42-8.037-1.42h-.166c-2.815 0-5.519.539-8.037 1.42-1.042-4.254-2.775-7.42-5.15-11.42h26.541c-2.376 4-4.109 7.166-5.151 11.42z"
-          className="fill-current text-gray-900"
-        />
-      </svg>{' '} */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 312.999 312.999"
-        {...props}>
-        <path
-          stroke="#000"
-          strokeMiterlimit={10}
-          strokeWidth={9}
-          d="M305.6 178.053c-3.2-.8-6.4 0-9.2 2-10.4 8.8-22.4 16-35.6 20.8-12.4 4.8-26 7.2-40.4 7.2-32.4 0-62-13.2-83.2-34.4-21.2-21.2-34.4-50.8-34.4-83.2 0-13.6 2.4-26.8 6.4-38.8 4.4-12.8 10.8-24.4 19.2-34.4 3.6-4.4 2.8-10.8-1.6-14.4-2.8-2-6-2.8-9.2-2-34 9.2-63.6 29.6-84.8 56.8-20.4 26.8-32.8 60-32.8 96.4 0 43.6 17.6 83.2 46.4 112s68.4 46.4 112 46.4c36.8 0 70.8-12.8 98-34 27.6-21.6 47.6-52.4 56-87.6 2-6-1.2-11.6-6.8-12.8zm-61.2 83.6c-23.2 18.4-52.8 29.6-85.2 29.6-38 0-72.4-15.6-97.2-40.4-24.8-24.8-40.4-59.2-40.4-97.2 0-31.6 10.4-60.4 28.4-83.6 12.4-16 28-29.2 46-38.4-2 4.4-4 8.8-5.6 13.6-5.2 14.4-7.6 29.6-7.6 45.6 0 38 15.6 72.8 40.4 97.6s59.6 40.4 97.6 40.4c16.8 0 32.8-2.8 47.6-8.4 5.2-2 10.4-4 15.2-6.4-9.6 18.4-22.8 34.8-39.2 47.6z"
-          className="fill-current gray-900"
-        />
-      </svg>
-    </div>
+    /*     <motion.div
+      animate
+      className={className}
+      onClick={() => setDarkMode(!darkMode)}>
+      <motion.div
+        animate
+        className="bg-blue-400 h-10 w-10 rounded-full"></motion.div>
+    </motion.div> */
+    <motion.div
+      animate
+      className={` h-10 w-10 mr-4 cursor-pointer flex items-center justify-center rounded-full ${
+        darkMode ? 'bg-gray-600' : 'bg-purple-200'
+      }`}
+      onClick={() => setDarkMode(!darkMode)}>
+      {!darkMode && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}>
+          <SunIcon className="h-6 w-6 text-purple-600" />
+        </motion.div>
+      )}
+      {darkMode && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}>
+          <MoonIcon className="h-6 w-6 text-white" />
+        </motion.div>
+      )}
+    </motion.div>
+    /*     <div className="mr-6 p-1 cursor-pointer rounded-full transition hover:text-white hover:bg-purple-600">
+      <MoonIcon className="h-6 w-6" />
+    </div> */
   );
 }
 

@@ -1,89 +1,57 @@
 import { fetchAPI } from '../../lib/api';
-import Menu from '../../components/Menu';
-
 import Head from 'next/head';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faDesktop,
-  faChevronLeft,
-  faChevronRight,
-} from '@fortawesome/free-solid-svg-icons';
+import { CodeIcon, ExternalLinkIcon } from '@heroicons/react/outline';
 import AwesomeSlider from 'react-awesome-slider';
-import Footer from '../../components/Footer';
+import Layout from '../../components/layout/Layout';
+import { Button, LightButton } from '../../components/common/Buttons';
+import ImageGrid from '../../components/projects/singleProject/ImageGrid';
 
 export default function Project({ project }) {
   return (
     <>
-      <Head>
-        <title>Julie Larsen | {project.title}</title>
-      </Head>
-      <Menu></Menu>
-
-      <div className="lg:container mx-auto lg:px-10">
-        <AwesomeSlider
-          className="single-product__carousel h-96 pt-10 lg:p-10"
-          organicArrows={false}
-          buttonContentRight={
-            <FontAwesomeIcon
-              className="text-white text-4xl"
-              icon={faChevronRight}
+      <Layout>
+        <Head>
+          <title>Julie Larsen | {project.title}</title>
+        </Head>
+        <div className="py-20 md:py-40">
+          <div className="mx-auto">
+            <ImageGrid
+              featured={project.featured_image}
+              images={project.images}
             />
-          }
-          buttonContentLeft={
-            <FontAwesomeIcon
-              className="text-white text-4xl"
-              icon={faChevronLeft}
-            />
-          }
-          bullets={false}
-          fillParent={false}>
-          {project.images.map((image) => (
-            <div
-              key={image.id}
-              className="h-full w-full object-cover object-center">
-              <img
-                src={image.url}
-                className="h-full w-full object-cover  object-center"
-                alt={image.alt}
-              />
+          </div>
+          <div className="mx-auto pt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="col-span-2">
+              <h1 className="font-xl text-center md:text-left">
+                {project.title}
+              </h1>
+              <p className="text-base text-gray-700 mt-6 leading-relaxed whitespace-pre-line">
+                {project.brief}
+              </p>
+              <div className="pt-4 flex flex-wrap gap-2 items-center justify-center md:justify-start">
+                <Button href={project.link_live}>
+                  <ExternalLinkIcon className="w-4 mr-2 icon" />
+                  View Live
+                </Button>
+                <LightButton href={project.link_github}>
+                  <CodeIcon className="w-4 mr-2 icon" />
+                  View on Github
+                </LightButton>
+              </div>
             </div>
-          ))}
-        </AwesomeSlider>
-      </div>
-      <div className="container-fluid lg:container mx-auto lg:px-10 pt-10 lg:pt-0 grid grid-cols-1 md:grid-cols-3 gap-0 lg:gap-6">
-        <div className="col-span-2 p-6 lg:p-10">
-          <h1 className="font-xl">{project.title}</h1>
-          <p className="text-base text-gray-700 mt-6 leading-relaxed whitespace-pre-line">
-            {project.brief}
-          </p>
-          <div>
-            <a className="btn w-max ml-0" href={project.link_live}>
-              <FontAwesomeIcon className="w-4 mr-2 icon" icon={faDesktop} />
-              View Live
-            </a>
-            <a
-              className="btn btn-light text-purple-600 w-max ml-0"
-              href={project.link_github}>
-              <FontAwesomeIcon
-                className="w-4 mr-2 icon"
-                icon={['fab', 'github']}
-              />
-              View on Github
-            </a>
+            <div className="pt-6 lg:p-10  text-center md:text-left">
+              <h2 className="text-lg font-semibold">Technology</h2>
+              <ul className="text-gray-700 divide-y divide-gray-300">
+                {project.technologies.map((tech) => (
+                  <li key={tech.id} className="py-2">
+                    {tech.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="p-6 lg:p-10">
-          <h2 className="text-lg font-semibold">Technology</h2>
-          <ul className="text-gray-700">
-            {project.technologies.map((tech) => (
-              <li key={tech.id} className="border-b border-gray-300 pt-2 pb-2">
-                {tech.name}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <Footer />
+      </Layout>
     </>
   );
 }

@@ -22,9 +22,16 @@ h3 {
 }
 
 p {
-  @apply text-lg text-gray-700 my-4 leading-relaxed;
+  @apply text-base text-gray-700 my-4 leading-normal;
 }
-a {
+
+@screen md {
+  p {
+    @apply text-lg  leading-relaxed;
+  }
+}
+
+.highlight__link {
   @apply font-semibold underline p-1 text-purple-600 hover:bg-purple-200;
 }
 .sidemenu {

@@ -13,6 +13,9 @@ module.exports = {
       5: 5,
     },
     extend: {
+      height: {
+        xxl: '450px',
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
@@ -24,10 +27,21 @@ module.exports = {
         rose: colors.rose,
         pink: colors.pink,
       },
+      animation: {
+        'spin-reverse': 'spin-reverse 2s linear infinite',
+      },
+      keyframes: {
+        'spin-reverse': {
+          '0%': {
+            transform: 'rotate(-90deg), rotate(-89deg)',
+          },
+          '100%': { transform: 'rotate(-357deg)' },
+        },
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [require('tailwindcss-line-clamp')],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

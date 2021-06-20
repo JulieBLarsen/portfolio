@@ -1,13 +1,15 @@
 import React from 'react';
 import { Button, LightButton } from '../common/Buttons';
-import Highlight from '../common/Highlight';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
+import Highlight from '../common/Highlight';
 import Image from 'next/image';
 
 function Skills() {
   return (
-    <div className="container max-w-6xl h-screen mx-auto flex flex-col gap-10 justify-center">
+    <section
+      id="skills"
+      className="h-screen mx-auto flex flex-col gap-10 justify-center">
       <div className="flex flex-row justify-center items-center gap-10">
         <div>
           <h2>Skills & Technology</h2>
@@ -30,6 +32,17 @@ function Skills() {
             For my projects I use <Highlight>Git</Highlight> and I often use
             <Highlight>Strapi</Highlight> as a CMS.
           </p>
+
+          <div className="mt-10 flex flex-row">
+            <Button href="/projects">View projects</Button>
+            <LightButton href="https://github.com/juliebl">
+              <FontAwesomeIcon
+                className="mr-2 h-4 inline"
+                icon={['fab', 'github']}
+              />
+              Github
+            </LightButton>
+          </div>
         </div>
         <div className="relative rounded-xl h-full w-full">
           <Image
@@ -41,7 +54,7 @@ function Skills() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
