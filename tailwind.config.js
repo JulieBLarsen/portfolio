@@ -16,6 +16,15 @@ module.exports = {
       height: {
         xxl: '450px',
       },
+      screens: {
+        xs: '475px',
+      },
+      boxShadow: {
+        'fog-purple':
+          '0px 50px 100px -20px rgba(79, 70, 229, 0.15),0px 30px 60px -30px rgba(79, 70, 229, 0.2) ',
+        'fog-mint':
+          '0px 50px 100px -20px rgba(110, 231, 183, 0.15),0px 30px 60px -30px rgba(110, 231, 183, 0.2) ',
+      },
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
