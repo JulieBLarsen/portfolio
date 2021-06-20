@@ -11,20 +11,19 @@ function About() {
   return (
     <section
       id="about"
-      className="h-screen grid grid-cols-1 lg:grid-cols-3 lg:gap-10">
-      <div className="w-full flex justify-center items-center lg:items-baseline">
-        <div className="relative h-60 w-60 sm:h-80 sm:w-80 rounded-full">
+      className="h-screen grid m-auto grid-cols-1 lg:grid-cols-3 lg:gap-10">
+      <div className="w-full flex flex-col justify-center items-center lg:items-baseline">
+        <div className="relative m-auto lg:m-0 h-60 w-60 xs:h-80 xs:w-80 rounded-full shadow-fog-purple">
           <Image
             src="/juliecutout2.png"
             alt="Picture of Julie Larsen"
             layout="fill"
             objectFit="contain"
-            className="bg-rose-400 dark:bg-black rounded-full"
+            className="bg-purple-300 dark:bg-black rounded-full"
           />
         </div>
       </div>
-
-      <div className="col-span-2 flex flex-col items-center text-center sm:items-baseline sm:text-left">
+      <div className="col-span-2 flex flex-col justify-center items-center text-center sm:items-baseline sm:text-left">
         <h2>Get to know me</h2>
         <p className="font-semibold text-gray-800">
           I'm 30 years old and I live in Stavanger, Norway. I just graduated
