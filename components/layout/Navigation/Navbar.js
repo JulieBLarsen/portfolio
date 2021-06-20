@@ -24,8 +24,8 @@ function Navbar() {
 
   return (
     <motion.nav
-      className={`fixed w-full py-2 z-40 bg-white ${
-        menuOpen ? 'bg-opacity-75' : ' bg-opacity-50'
+      className={`fixed w-full py-2 px-4 z-40 bg-white ${
+        menuOpen ? 'bg-opacity-90' : ' bg-opacity-70'
       } backdrop-filter backdrop-blur-sm shadow-sm`}
       animate={menuOpen ? 'open' : 'closed'}>
       <div className="container mx-auto flex flex-row justify-between items-center">
@@ -36,7 +36,9 @@ function Navbar() {
           </a>
         </Link>
         <div className="flex">
-          <DarkModeToggler />
+          <div className="hidden mr-4 sm:block">
+            <DarkModeToggler />
+          </div>
           <Menutoggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
       </div>

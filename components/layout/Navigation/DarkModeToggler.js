@@ -18,7 +18,7 @@ function DarkModeToggler() {
     </motion.div> */
     <motion.div
       animate
-      className={` h-10 w-10 mr-4 cursor-pointer flex items-center justify-center rounded-full ${
+      className={`h-10 w-10 cursor-pointer flex items-center justify-center rounded-full ${
         darkMode ? 'bg-gray-600' : 'bg-purple-200'
       }`}
       onClick={() => setDarkMode(!darkMode)}>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const variants = {
+export const menuItemVariants = {
   open: {
     y: 0,
     opacity: 1,
@@ -23,7 +23,7 @@ export default function MenuItem({ href, children }) {
     <Link href={href}>
       <a>
         <motion.li
-          variants={variants}
+          variants={menuItemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="cursor-pointer p-2 py-4 text-lg font-medium hover:font-semibold hover:text-purple-600">
@@ -38,7 +38,7 @@ export function IconMenuItem({ href, children }) {
     <Link href={href}>
       <a>
         <motion.li
-          variants={variants}
+          variants={menuItemVariants}
           className="cursor-pointer px-2 text-lg font-medium hover:font-semibold hover:text-purple-600">
           {children}
         </motion.li>

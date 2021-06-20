@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import MenuItem, { IconMenuItem } from './MenuItems';
+import MenuItem, { IconMenuItem, menuItemVariants } from './MenuItems';
+import DarkModeToggler from './DarkModeToggler';
 
 const variants = {
   open: {
@@ -38,7 +39,12 @@ function Menu({ menuOpen, setMenuOpen }) {
         <MenuItem href="/#skills">Skills</MenuItem>
         <MenuItem href="/projects">Projects</MenuItem>
         <MenuItem href="/#contact">Contact</MenuItem>
-        <MenuItem href="/julie-larsen_cv.pdf">View CV</MenuItem>
+        <MenuItem href="/julie-larsen_cv.pdf">View CV</MenuItem>{' '}
+        <motion.div
+          variants={menuItemVariants}
+          className="block sm:hidden mx-auto my-6">
+          <DarkModeToggler />
+        </motion.div>
         <motion.ul variants={variants} className="mt-6 flex">
           <IconMenuItem href="https://github.com/juliebl">
             <FontAwesomeIcon className="h-4" icon={['fab', 'github']} />
@@ -52,7 +58,7 @@ function Menu({ menuOpen, setMenuOpen }) {
             <FontAwesomeIcon className="h-4" icon={['fab', 'discord']} />
             <p className="sr-only">Discord User Link</p>
           </IconMenuItem>
-        </motion.ul>
+        </motion.ul>{' '}
       </motion.ul>
     </motion.div>
   );

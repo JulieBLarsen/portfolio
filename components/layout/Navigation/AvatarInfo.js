@@ -5,7 +5,7 @@ import { CodeIcon } from '@heroicons/react/outline';
 
 function AvatarInfo() {
   return (
-    <Menu as="div" className="relative">
+    <Menu as="div" className="relative sm:w-[79px]">
       {({ open }) => (
         <>
           <Menu.Button className="focus:outline-none">
