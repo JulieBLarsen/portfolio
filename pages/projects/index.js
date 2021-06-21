@@ -26,7 +26,7 @@ export default function Projects({ projects, featuredTech }) {
   const [filteredTech, setFilteredTech] = useState(featuredTech);
   const [sortBy, setSortBy] = useState(orders[0]);
   const [orderedProjects, setOrderedProjects] = useState(projects);
-  console.log(projects);
+
   return (
     <>
       <Layout>
