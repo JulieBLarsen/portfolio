@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 
 export default function Project({ project }) {
   const router = useRouter();
+  console.log(project);
   return (
     <>
       <Layout>

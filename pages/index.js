@@ -5,7 +5,7 @@ import Skills from '../components/home/Skills';
 import Contact from '../components/home/Contact';
 import Projects from '../components/home/projectsection/Projects';
 
-export default function Home() {
+function Home() {
   return (
     <>
       <Layout>
@@ -18,3 +18,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;

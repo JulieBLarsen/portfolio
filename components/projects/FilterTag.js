@@ -16,7 +16,6 @@ function FilterTag(props) {
 
   return (
     <span
-      key={id}
       className={`cursor-pointer m-1 py-2  px-3 transition hover:shadow font-medium rounded-md  text-sm leading-loose ${
         active ? 'text-white bg-purple-600 hover:bg-purple-500' : 'bg-white '
       }`}

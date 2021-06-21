@@ -40,10 +40,10 @@ function ImageGrid({ featured, images }) {
         <div className="h-full rounded-md shadow transition hover:shadow-lg row-span-2 col-span-2">
           <div className="relative w-full h-full">
             <Image
-              src={featured.url}
+              src={featured.formats.large.url}
               alt={featured.alternativeText}
               layout="fill"
-              className="cursor-pointer object-cover object-center rounded-t-md"
+              className="cursor-pointer object-cover object-center rounded-md"
               onClick={() => {
                 setOpen(!open);
                 setPhotoIndex(0);
@@ -75,10 +75,10 @@ function ImageGrid({ featured, images }) {
                 className={`max-h-full rounded-md shadow transition hover:shadow-lg ${space}`}>
                 <div className="relative w-full h-full">
                   <Image
-                    src={image.url}
+                    src={image.formats.small.url}
                     alt={image.alternativeText}
                     layout="fill"
-                    className="cursor-pointer object-cover object-center rounded-t-md"
+                    className="cursor-pointer object-cover object-center rounded-md"
                     onClick={() => {
                       setOpen(!open);
                       setPhotoIndex(index + 1);
