@@ -1,5 +1,6 @@
-import Gallery from './Gallery';
 import { useState } from 'react';
+import Image from 'next/image';
+import Gallery from './Gallery';
 import { ViewGridIcon } from '@heroicons/react/outline';
 import ImageSlider from './ImageSlider';
 
@@ -37,15 +38,18 @@ function ImageGrid({ featured, images }) {
           View images
         </p>
         <div className="h-full rounded-md shadow transition hover:shadow-lg row-span-2 col-span-2">
-          <img
-            src={featured.url}
-            alt={featured.alternativeText}
-            className="cursor-pointer object-cover w-full h-full rounded-md"
-            onClick={() => {
-              setOpen(!open);
-              setPhotoIndex(0);
-            }}
-          />
+          <div className="relative w-full h-full">
+            <Image
+              src={featured.url}
+              alt={featured.alternativeText}
+              layout="fill"
+              className="cursor-pointer object-cover object-center rounded-t-md"
+              onClick={() => {
+                setOpen(!open);
+                setPhotoIndex(0);
+              }}
+            />
+          </div>
         </div>
         <div className="grid grid-cols-2 grid-rows-2 col-span-2 row-span-2 gap-2 h-full">
           {fourImages.map((image, index) => {
@@ -69,15 +73,18 @@ function ImageGrid({ featured, images }) {
               <div
                 key={image.id}
                 className={`max-h-full rounded-md shadow transition hover:shadow-lg ${space}`}>
-                <img
-                  src={image.url}
-                  alt={image.alternativeText}
-                  className="cursor-pointer object-cover w-full h-full rounded-md"
-                  onClick={() => {
-                    setOpen(!open);
-                    setPhotoIndex(index + 1);
-                  }}
-                />
+                <div className="relative w-full h-full">
+                  <Image
+                    src={image.url}
+                    alt={image.alternativeText}
+                    layout="fill"
+                    className="cursor-pointer object-cover object-center rounded-t-md"
+                    onClick={() => {
+                      setOpen(!open);
+                      setPhotoIndex(index + 1);
+                    }}
+                  />
+                </div>
               </div>
             );
           })}

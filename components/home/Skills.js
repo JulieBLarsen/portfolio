@@ -44,7 +44,7 @@ function Skills() {
               className="mr-2 h-4 inline"
               icon={['fab', 'github']}
             />
-            Github
+            <span>Github</span>
           </LightButton>
         </div>
       </div>

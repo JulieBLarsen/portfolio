@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { AvatarInfoMenuItem } from './MenuItems';
 import { Menu, Transition } from '@headlessui/react';
 import { CodeIcon } from '@heroicons/react/outline';
@@ -14,6 +15,14 @@ function AvatarInfo() {
               alt="Cute icon of Julie Larsen"
               className="hover:animate-spin w-12 transition rounded-full"
             />
+            <div className="relative w-12 h-full">
+              <Image
+                src="/logo_small.svg"
+                alt="Cute icon of Julie Larsen"
+                layout="fill"
+                className="cursor-pointer object-cover object-center rounded-t-md hover:animate-spin w-12 transition rounded-full"
+              />
+            </div>
           </Menu.Button>
           <Transition
             show={open}

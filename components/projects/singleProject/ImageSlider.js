@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import AwesomeSlider from 'react-awesome-slider';
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/outline';
 
@@ -21,15 +22,18 @@ function ImageSlider(props) {
           <div
             key={image.id}
             className="h-full w-full object-cover object-center">
-            <img
-              src={image.url}
-              className="h-full w-full object-cover  object-center"
-              alt={image.alt}
-              onClick={() => {
-                setOpen(!open);
-                setPhotoIndex(index);
-              }}
-            />
+            <div className="relative w-full h-full">
+              <Image
+                src={image.url}
+                alt={image.alt}
+                layout="fill"
+                className="cursor-pointer object-cover object-center rounded-t-md"
+                onClick={() => {
+                  setOpen(!open);
+                  setPhotoIndex(index);
+                }}
+              />
+            </div>
           </div>
         ))}
       </AwesomeSlider>

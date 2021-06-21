@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/outline';
 import { useEffect, useState } from 'react';
@@ -6,12 +7,14 @@ function ProjectCard({ project }) {
   return (
     <>
       <div className="bg-white rounded-md shadow transition hover:shadow-lg">
-        <img
-          className="cursor-pointer rounded-t-md h-40 w-full transition object-cover object-center"
-          src={project.images[0].url}
-          alt={project.title}
-        />
-
+        <div className="relative w-full h-40">
+          <Image
+            src={project.images[0].url}
+            alt={project.title}
+            layout="fill"
+            className="cursor-pointer object-cover object-center rounded-t-md"
+          />
+        </div>
         <div className="p-4">
           <h4 className="py-2 font-semibold">{project.title}</h4>
 

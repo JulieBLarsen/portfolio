@@ -8,11 +8,9 @@ function ProjectRow() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const url = getStrapiURL('/projects?featured=true&_sort=id:DESC');
-
   useEffect(() => {
     axios
-      .get(url)
+      .get(getStrapiURL('/projects?featured=true&_sort=id:DESC'))
       .then((res) => {
         console.log(res.data);
         setProjects(res.data);
@@ -23,7 +21,7 @@ function ProjectRow() {
         setLoading(false);
         console.log(error);
       });
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps */
+  }, []);
 
   if (error) {
     return (
