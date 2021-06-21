@@ -10,17 +10,12 @@ function AvatarInfo() {
       {({ open }) => (
         <>
           <Menu.Button className="focus:outline-none">
-            <img
-              src="/logo_small.svg"
-              alt="Cute icon of Julie Larsen"
-              className="hover:animate-spin w-12 transition rounded-full"
-            />
-            <div className="relative w-12 h-full">
+            <div className="relative w-12 h-12">
               <Image
                 src="/logo_small.svg"
                 alt="Cute icon of Julie Larsen"
                 layout="fill"
-                className="cursor-pointer object-cover object-center rounded-t-md hover:animate-spin w-12 transition rounded-full"
+                className="cursor-pointer object-cover object-center rounded-t-md hover:animate-spin w-12 transition"
               />
             </div>
           </Menu.Button>

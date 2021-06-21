@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import selfie from '../../public/juliecutout2.png';
 import Link from 'next/link';
 import { Button, LightButton } from '../common/Buttons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,8 +16,9 @@ function About() {
       <div className="w-full flex flex-col justify-center items-center lg:items-baseline">
         <div className="relative m-auto lg:m-0 h-60 w-60 xs:h-80 xs:w-80 rounded-full shadow-fog-purple">
           <Image
-            src="/juliecutout2.png"
+            src={selfie}
             alt="Picture of Julie Larsen"
+            loading="eager"
             layout="fill"
             objectFit="contain"
             className="bg-purple-300 dark:bg-black rounded-full"
