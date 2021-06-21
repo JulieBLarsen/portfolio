@@ -24,7 +24,7 @@ function Menu({ menuOpen, setMenuOpen }) {
         open: { opacity: 1, height: '100vh' },
         collapsed: { opacity: 0, height: 0 },
       }}
-      transition={{ duration: 0.8, ease: [0.04, 0.62, 0.23, 0.98] }}
+      transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
       className="cursor-pointer h-screen"
       onClick={() => (!listHover ? setMenuOpen(false) : setMenuOpen(true))}>
       <motion.ul
@@ -48,7 +48,7 @@ function Menu({ menuOpen, setMenuOpen }) {
             className="block sm:hidden mx-auto my-6">
             <DarkModeToggler />
           </motion.div>
-          <motion.ul variants={variants} className="mt-6 flex justify-center">
+          <motion.ul className="mt-6 flex justify-center">
             <IconMenuItem href="https://github.com/juliebl">
               <FontAwesomeIcon className="h-4" icon={['fab', 'github']} />
               <p className="sr-only">Github Link</p>
