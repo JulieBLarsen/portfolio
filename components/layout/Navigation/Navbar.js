@@ -27,8 +27,8 @@ function Navbar() {
       } backdrop-filter backdrop-blur-sm shadow-sm`}
       animate={menuOpen ? 'open' : 'closed'}>
       <div className="container mx-auto flex flex-row justify-between items-center">
-        {/* add width to make same width as darkmodetoggler + menuicon so center is centered */}
-        <div className=" sm:w-[79px]">
+        {/* add sm:w-[79px] to div below to make same width as darkmodetoggler + menuicon so center is centered */}
+        <div>
           <div className="relative w-12 h-12">
             <Link href="/">
               <Image
@@ -41,16 +41,12 @@ function Navbar() {
           </div>
         </div>
 
-        {/*  <AvatarInfo /> */}
-        <Link href="/">
-          <a className="text-sm font-semibold text-gray-800 transition hover:text-purple-600 uppercase">
-            Julie Larsen
-          </a>
-        </Link>
+        <AvatarInfo />
+
         <div className="flex">
-          <div className="hidden mr-4 sm:block">
+          {/*        <div className="hidden mr-4 sm:block">
             <DarkModeToggler />
-          </div>
+          </div> */}
           <Menutoggle menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         </div>
       </div>

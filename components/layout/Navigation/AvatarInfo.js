@@ -6,31 +6,24 @@ import { CodeIcon } from '@heroicons/react/outline';
 
 function AvatarInfo() {
   return (
-    <Menu as="div" className="relative sm:w-[79px]">
+    <Menu as="div" className="relative">
       {({ open }) => (
         <>
-          <Menu.Button className="focus:outline-none">
-            <div className="relative w-12 h-12">
-              <Image
-                src="/logo_small.svg"
-                alt="Cute icon of Julie Larsen"
-                layout="fill"
-                className="cursor-pointer object-cover object-center rounded-t-md hover:animate-spin w-12 transition"
-              />
-            </div>
+          <Menu.Button className="focus:outline-none text-sm font-semibold text-gray-800 transition hover:text-purple-600 uppercase">
+            Julie Larsen
           </Menu.Button>
           <Transition
             show={open}
             enter="transition duration-100 ease-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
-            leave="transition duration-75 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0">
+            enterFrom=" opacity-0"
+            enterTo=" opacity-100"
+            leave="transition duration-100 ease-out"
+            leaveFrom=" opacity-100"
+            leaveTo=" opacity-0">
             <Menu.Items
               as="div"
               static
-              className="origin-top-right absolute left-0 w-60 rounded-md p-4 bg-white  shadow-sm focus:outline-none">
+              className="absolute inset-x-0 top-9 mx-auto w-60 rounded-md p-4 bg-white  shadow-sm focus:outline-none">
               <Menu.Item as="p" className="m-0 text-sm leading-relaxed">
                 This website was built with{' '}
                 <AvatarInfoMenuItem href="https://nextjs.org/">

@@ -43,11 +43,11 @@ function Menu({ menuOpen, setMenuOpen }) {
           <MenuItem href="/projects">Projects</MenuItem>
           <MenuItem href="/#contact">Contact</MenuItem>
           <MenuItem href="/julie-larsen_cv.pdf">View CV</MenuItem>{' '}
-          <motion.div
+          {/*         <motion.div
             variants={menuItemVariants}
-            className="block sm:hidden mx-auto my-6">
+            className="flex justify-center sm:hidden mx-auto mt-6 mb-10">
             <DarkModeToggler />
-          </motion.div>
+          </motion.div> */}
           <motion.ul className="mt-6 flex justify-center">
             <IconMenuItem href="https://github.com/juliebl">
               <FontAwesomeIcon className="h-4" icon={['fab', 'github']} />
