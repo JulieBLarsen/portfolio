@@ -12,9 +12,9 @@ function About() {
   return (
     <section
       id="about"
-      className="h-screen grid m-auto grid-cols-1 lg:grid-cols-3 lg:gap-10">
+      className="min-h-screen grid m-auto grid-cols-1 lg:grid-cols-3 lg:gap-10">
       <div className="w-full flex flex-col justify-center items-center lg:items-baseline">
-        <div className="relative m-auto lg:m-0 h-60 w-60 xs:h-80 xs:w-80 rounded-full shadow-fog-purple">
+        <div className="relative m-auto my-10 lg:m-0 h-60 w-60 xs:h-80 xs:w-80 rounded-full shadow-fog-purple">
           <Image
             src={selfie}
             alt="Picture of Julie Larsen"

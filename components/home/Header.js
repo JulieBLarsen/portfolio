@@ -30,7 +30,7 @@ function Header() {
       variants={container}
       initial="hidden"
       animate="show"
-      className="relative container max-w-4xl h-screen mx-auto flex flex-col gap-5 justify-center">
+      className="relative container max-w-4xl min-h-screen mx-auto flex flex-col gap-5 justify-center">
       <motion.div variants={variant} className="h-44 relative">
         <IllustratedAvatar />
       </motion.div>

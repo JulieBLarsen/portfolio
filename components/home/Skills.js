@@ -8,9 +8,9 @@ function Skills() {
   return (
     <section
       id="skills"
-      className="h-screen grid grid-cols-1 lg:grid-cols-3 lg:gap-10">
+      className="min-h-screen mt-20 sm:mt-0 grid grid-cols-1 lg:grid-cols-3 lg:gap-10">
       <div className="w-full lg:hidden flex justify-center items-center lg:items-baseline">
-        <div className="relative h-60 w-60 xs:h-80 xs:w-80 m-auto shadow-fog-purple rounded-full">
+        <div className="relative my-10 h-60 w-60 xs:h-80 xs:w-80 m-auto shadow-fog-purple rounded-full">
           <Image
             src="/keyboard.jpg"
             alt="Colorful keyboard"

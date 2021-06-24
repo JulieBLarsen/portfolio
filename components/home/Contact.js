@@ -68,7 +68,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-36 md:mx-auto min-h-screen flex flex-col justify-center align-middle">
+      className="py-36 md:mx-auto min-h-screen flex flex-col justify-center align-middle items-center text-center sm:items-baseline sm:text-left">
       <div className="md:text-center  lg:w-1/2 mx-auto">
         <div>
           <h2>Get in touch with me</h2>
