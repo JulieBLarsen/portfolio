@@ -30,7 +30,7 @@ function Navbar() {
         {/* add sm:w-[79px] to div below to make same width as darkmodetoggler + menuicon so center is centered */}
         <div>
           <div className="relative w-12 h-12">
-            <Link href="/">
+            <Link href="/" passHref>
               <Image
                 src="/logo_small.svg"
                 alt="Cute icon of Julie Larsen"
