@@ -40,6 +40,7 @@ function ImageGrid({ featured, images }) {
         <div className="h-full rounded-md shadow transition hover:shadow-lg row-span-2 col-span-2">
           <div className="relative w-full h-full">
             <Image
+              priority
               src={featured.formats.large.url}
               alt={featured.alternativeText}
               layout="fill"

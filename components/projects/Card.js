@@ -8,6 +8,7 @@ function Card({ project }) {
       <div className="relative rounded-t-md">
         <Link href={`/projects/${project.slug}`} passHref>
           <Image
+            priority
             src={project.featured_image.formats.small.url}
             alt={project.title}
             layout="fill"

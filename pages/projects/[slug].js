@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { fetchAPI } from '../../lib/api';
+import { BASE_URL, fetchAPI } from '../../lib/api';
 import {
   ChevronLeftIcon,
   CodeIcon,
@@ -9,10 +9,22 @@ import Layout from '../../components/layout/Layout';
 import { Button, LightButton } from '../../components/common/Buttons';
 import ImageGrid from '../../components/projects/singleProject/ImageGrid';
 import { useRouter } from 'next/router';
+import axios from 'axios';
+import useSWR from 'swr';
 
-export default function Project({ project }) {
+const fetcher = (url) => axios.get(url).then((res) => res.data);
+
+export default function Project({ initialProject }) {
   const router = useRouter();
-  console.log(project);
+  const { slug } = router.query;
+  const apiUrl = `${BASE_URL}/projects?slug=${slug}`;
+  const { data, error } = useSWR(apiUrl, fetcher, {
+    initialData: initialProject,
+  });
+  if (error) return <p>error</p>;
+  if (!data) return <p>loading..</p>;
+
+  const project = data[0];
   return (
     <>
       <Layout>
@@ -70,25 +82,21 @@ export default function Project({ project }) {
     </>
   );
 }
-
 export async function getStaticPaths() {
-  const articles = await fetchAPI('/projects');
-
+  const projects = await fetcher(BASE_URL + '/projects');
+  const paths = projects.map((project) => ({
+    params: {
+      slug: project.slug,
+    },
+  }));
   return {
-    paths: articles.map((project) => ({
-      params: {
-        slug: project.slug,
-      },
-    })),
+    paths,
     fallback: false,
   };
 }
-
 export async function getStaticProps({ params }) {
-  const projects = await fetchAPI(`/projects?slug=${params.slug}`);
-
-  return {
-    props: { project: projects[0] },
-    revalidate: 1,
-  };
+  const initialProject = await fetcher(
+    `${BASE_URL}/projects?slug=${params.slug}`
+  );
+  return { props: { initialProject } };
 }
